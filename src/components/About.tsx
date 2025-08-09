@@ -130,7 +130,7 @@ const About = () => {
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm"
+                    className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm flex items-center gap-1 hover:bg-blue-100 transition-colors cursor-pointer"
                   >
                     {skill}
                   </span>
@@ -151,7 +151,7 @@ const About = () => {
                 ].map((hobby) => (
                   <span
                     key={hobby.text}
-                    className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm flex items-center gap-1 hover:bg-gray-100 transition-colors"
+                    className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm flex items-center gap-1 hover:bg-gray-100 transition-colors cursor-pointer"
                   >
                     <span className="text-base">{hobby.icon}</span>
                     {hobby.text}
