@@ -10,7 +10,7 @@ const Projects = () => {
           </div>
           <p className="text-gray-600">
             Researched, developed and deployed multi factor automated trading strategy over Google Cloud 
-            for Nifty futures traded on the NSE to achieve a Sharpe ratio of 3.52 with a daily turnover of 10%.
+            for Nifty futures traded on the NSE to achieve a Sharpe ratio of 3.52 with a daily turnover of 10%. <a href="https://india-stock-public.streamlit.app/">Website</a>
           </p>
         </div>
       </div>

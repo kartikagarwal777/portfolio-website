@@ -16,10 +16,11 @@ export default function Home() {
             <p className="text-xl text-gray-600">Alpha Quant Researcher & Former Software Engineer</p>
             <div className="flex justify-center space-x-4">
               <a 
-                href="mailto:kartikagarwal777@gmail.com"
+                href="/Agarwal_Kartik.pdf"
+                download="Agarwal_Kartik.pdf"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
-                Contact Me
+                Download Resume
               </a>
               <a 
                 href="https://www.linkedin.com/in/kartik-agarwal/"
