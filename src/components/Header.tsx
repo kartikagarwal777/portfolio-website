@@ -16,7 +16,7 @@ const Header = () => {
             <Link href="#contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
             <a 
               href="/resume.pdf"
-              download
+              download="Agarwal_Kartik.pdf"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
             >
               Download Resume
