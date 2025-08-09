@@ -35,7 +35,7 @@ const Experience = () => {
         }
       ],
       achievements: [
-        "Generated efficient trading strategy exploiting mispricing in stock returns using NLP text-based network classification"
+        "Generated efficient trading strategy for US large cap stocks exploiting misclassification between official and fundamental peers using NLP text-based network classification"
       ]
     },
     {
