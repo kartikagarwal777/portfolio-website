@@ -139,6 +139,28 @@ const About = () => {
                 ))}
               </div>
             </div>
+            <div>
+              <h4 className="font-medium text-gray-900 mb-2">Personal Interests</h4>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { icon: "⚽", text: "Soccer" },
+                  { icon: "🎾", text: "Tennis" },
+                  { icon: "🥋", text: "Martial Arts" },
+                  { icon: "🏎️", text: "Car Racing" },
+                  { icon: "⌚", text: "Watches" },
+                  { icon: "🎬", text: "Horror Movies" },
+                  { icon: "🎮", text: "Video Games" }
+                ].map((hobby) => (
+                  <span
+                    key={hobby.text}
+                    className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm flex items-center gap-1 hover:bg-gray-100 transition-colors"
+                  >
+                    <span className="text-base">{hobby.icon}</span>
+                    {hobby.text}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
