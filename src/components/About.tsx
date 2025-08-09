@@ -8,8 +8,9 @@ const About = () => {
             <div>
                 <p className="text-lg text-gray-600 mb-4">
                     Quantitative Researcher at QMS Capital Management specializing in systematic trading strategies, 
-                    machine learning, and quantitative analysis. I have researched, designed and deployed 10+ alpha strategies 
-                    across Emerging Markets FX, commodities, equities, and fixed-income futures.
+                    machine learning, and quantitative analysis. I led the firm’s expansion into Emerging Markets FX 
+                    by developing a dynamic universe selection framework and launching 10+ production-ready alpha strategies 
+                    in this space. My broader research covers FX, commodities, equities, and fixed-income futures.
                 </p>
                 <p className="text-lg text-gray-600">
                     With a background in financial engineering and computer science, I build robust research infrastructure 
