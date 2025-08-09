@@ -146,7 +146,7 @@ const About = () => {
                   { icon: "🎾", text: "Tennis" },
                   { icon: "🥋", text: "Martial Arts" },
                   { icon: "🏎️", text: "Car Racing" },
-                  { icon: "⌚", text: "Watches" },
+                  { icon: "⌚", text: "Horology" },
                   { icon: "🎬", text: "Horror Movies" },
                   { icon: "🎮", text: "Video Games" }
                 ].map((hobby) => (
