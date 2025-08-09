@@ -6,16 +6,15 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-6">
             <div>
-              <p className="text-lg text-gray-600 mb-4">
-                Alpha Quant Researcher at QMS Capital Management with expertise in systematic trading strategies, 
-                machine learning, and quantitative analysis. Experienced in researching and implementing successful 
-                alpha strategies across multiple asset classes including Emerging Markets FX, commodities, equity, 
-                and fixed-income futures.
-              </p>
-              <p className="text-lg text-gray-600">
-                With a unique blend of financial engineering and computer science expertise, I specialize in developing 
-                sophisticated trading strategies and implementing robust quantitative models.
-              </p>
+                <p className="text-lg text-gray-600 mb-4">
+                    Quantitative Researcher at QMS Capital Management specializing in systematic trading strategies, 
+                    machine learning, and quantitative analysis. I have researched, designed and deployed 10+ alpha strategies 
+                    across Emerging Markets FX, commodities, equities, and fixed-income futures.
+                </p>
+                <p className="text-lg text-gray-600">
+                    With a background in financial engineering and computer science, I build robust research infrastructure 
+                    and predictive models that integrate macro, fundamental, and high-frequency signals to deliver scalable alpha.
+                </p>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Contact</h3>

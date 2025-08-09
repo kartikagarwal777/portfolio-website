@@ -13,7 +13,7 @@ export default function Home() {
         <section className="h-[60vh] min-h-[500px] flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-50">
           <div className="text-center space-y-4">
             <h1 className="text-5xl font-bold text-gray-900">Kartik Agarwal</h1>
-            <p className="text-xl text-gray-600">Alpha Quant Researcher & Software Engineer</p>
+            <p className="text-xl text-gray-600">Alpha Quant Researcher & Former Software Engineer</p>
             <div className="flex justify-center space-x-4">
               <a 
                 href="mailto:kartikagarwal777@gmail.com"
