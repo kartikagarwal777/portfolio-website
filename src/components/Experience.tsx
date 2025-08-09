@@ -35,7 +35,7 @@ const Experience = () => {
         }
       ],
       achievements: [
-        "Generate an efficient trading strategy that exploits mispricing in stock returns due to categorization bias between a stock’s official industry classification and its fundamental industry peers identified using Hoberg NLP text-based network industry classification on 10K filings. "
+        "Generate an efficient trading strategy that exploits mispricing in stock returns due to categorization bias between a stock’s official industry classification and its fundamental industry peers identified using Hoberg NLP text-based network industry classification on 10K filings."
       ]
     },
     {
