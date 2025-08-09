@@ -24,14 +24,14 @@ const About = () => {
                   <span className="mr-2">📍</span> Raleigh, NC
                 </p>
                 <p className="flex items-center">
-                  <span className="mr-2">📧</span>
                   <a href="mailto:kartikagarwal777@gmail.com" className="hover:text-blue-600">
+                    <span className="mr-2">📧</span>
                     kartikagarwal777@gmail.com
                   </a>
                 </p>
                 <p className="flex items-center">
-                  <span className="mr-2">📱</span>
                   <a href="tel:4244409728" className="hover:text-blue-600">
+                  <span className="mr-2">📱</span>
                     (424) 440-9728
                   </a>
                 </p>
