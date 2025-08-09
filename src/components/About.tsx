@@ -99,19 +99,19 @@ const About = () => {
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
-                      Git/Hg/SVN
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
-                      Kafka & Redis
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
                       GCP
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
                       AWS
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                      Git/Hg/SVN
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                      Kafka & Redis
                     </li>
                   </ul>
                 </div>
