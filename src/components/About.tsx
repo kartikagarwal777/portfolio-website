@@ -123,12 +123,10 @@ const About = () => {
                 {[
                   "Systematic Trading",
                   "Machine Learning",
-                  "Quantitative Analysis",
-                  "Statistical Arbitrage",
-                  "Alpha Research",
+                  "Global Macro Research",
+                  "Alpha Quantitative Research",
                   "Risk Management",
-                  "Financial Engineering",
-                  "Data Pipeline Development"
+                  "Research Infrastructure Development",
                 ].map((skill) => (
                   <span
                     key={skill}
@@ -144,9 +142,9 @@ const About = () => {
               <div className="flex flex-wrap gap-2">
                 {[
                   { icon: "⚽", text: "Soccer" },
-                  { icon: "🎾", text: "Tennis" },
                   { icon: "🥋", text: "Martial Arts" },
                   { icon: "🏎️", text: "Car Racing" },
+                  { icon: "🎾", text: "Tennis" },
                   { icon: "⌚", text: "Horology" },
                   { icon: "🎬", text: "Horror Movies" },
                   { icon: "🎮", text: "Video Games" }
