@@ -26,11 +26,11 @@ const Experience = () => {
       ]
     },
     {
-      company: "AFP, GIC (Singapore Sovereign Wealth Fund)",
+      company: "GIC (Singapore Sovereign Wealth Fund)",
       location: "San Francisco, CA",
       positions: [
         {
-          title: "Researcher",
+          title: "AFP",
           period: "Mar 2020 – Dec 2020"
         }
       ],
