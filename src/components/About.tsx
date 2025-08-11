@@ -9,7 +9,7 @@ const About = () => {
                 <p className="text-lg text-gray-600 mb-4">
                     Quantitative Researcher at QMS Capital Management specializing in systematic trading strategies, 
                     machine learning, and research infrastructure development. I led the firm’s expansion into Emerging Markets FX 
-                    by developing a dynamic universe selection framework and launching 10+ production-ready alpha strategies 
+                    by developing a dynamic universe selection framework and identifying 10+ exploitable alpha strategies 
                     in this space. My broader research covers FX, Commodities, Equities, and Fixed-Income futures.
                 </p>
                 <p className="text-lg text-gray-600">
