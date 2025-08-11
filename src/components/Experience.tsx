@@ -48,7 +48,7 @@ const Experience = () => {
         }
       ],
       achievements: [
-        "Partnered with Federal Reserve Bank of Philadelphia to quantify COVID policies' impact by using NLP to analyze all US state and local government policy documents",
+        "Partnered with the Federal Reserve Bank of Philadelphia to quantify COVID-19 policies by applying NLP techniques to analyze state and local government documents across the U.S., measuring their impact on household well-being.",
         "Analyzed trends and diversification in equity, debt, and real estate across countries"
       ]
     },
