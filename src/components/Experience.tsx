@@ -35,7 +35,7 @@ const Experience = () => {
         }
       ],
       achievements: [
-        "Generated an efficient trading strategy that exploits mispricing in stock returns due to categorization bias between a stock’s official industry classification and its fundamental industry peers identified using Hoberg NLP text-based network industry classification on 10K filings."
+        "Generated an efficient trading strategy that exploits mispricing in stock returns due to categorization bias between a stock’s official industry classification and its fundamental industry peers identified using Hoberg NLP text-based network industry classification on 10K filings. The firm considered investing $100 million in the strategy"
       ]
     },
     {
@@ -48,7 +48,7 @@ const Experience = () => {
         }
       ],
       achievements: [
-        "Partnered with the Federal Reserve Bank of Philadelphia to quantify COVID-19 policies by applying NLP techniques to analyze state and local government documents across the U.S., measuring their impact on household well-being.",
+        "Partnered with Federal Reserve Bank of Philadelphia to quantify COVID policies' impact by using NLP to analyze all US state and local government policy documents",
         "Analyzed trends and diversification in equity, debt, and real estate across countries"
       ]
     },
