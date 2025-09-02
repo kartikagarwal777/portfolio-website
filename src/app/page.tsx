@@ -17,13 +17,14 @@ export default function Home() {
         <section className="h-[60vh] min-h-[500px] flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-50">
           <div className="text-center space-y-4">
             <h1 className="text-5xl font-bold text-gray-900 animate-fade-in">Kartik Agarwal</h1>
-            <p className="text-xl text-gray-600 animate-fade-in-delay">Alpha Quant Researcher & Software Engineer</p>
+            <p className="text-xl text-gray-600 animate-fade-in-delay">Alpha Quant Researcher & Former Software Engineer</p>
             <div className="flex justify-center space-x-4 animate-fade-in-delay-2">
               <a 
-                href="mailto:kartikagarwal777@gmail.com"
+                href="/Agarwal_Kartik.pdf"
+                download="Agarwal_Kartik.pdf"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 hover:scale-105 transition-all"
               >
-                Contact Me
+                Download Resume
               </a>
               <a 
                 href="https://www.linkedin.com/in/kartik-agarwal/"
