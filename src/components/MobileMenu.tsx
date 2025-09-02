@@ -18,6 +18,20 @@ const MobileMenu = () => {
     { href: '#contact', text: 'Contact' },
   ];
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    toggleMenu();
+    
+    const element = document.querySelector(href);
+    if (element) {
+      const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="sm:hidden">
       <button
@@ -49,38 +63,62 @@ const MobileMenu = () => {
         </svg>
       </button>
 
+      {/* Overlay */}
       <div
-        className={`fixed inset-0 bg-gray-800 bg-opacity-50 transition-opacity duration-300 ${
+        className={`fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 transition-opacity duration-300 z-50 ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={toggleMenu}
+      />
+      
+      {/* Menu */}
+      <div
+        className={`fixed top-0 right-0 h-screen w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-[51] overflow-y-auto ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+        onClick={(e) => e.stopPropagation()}
       >
-        <div
-          className={`fixed inset-y-0 right-0 w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${
-            isOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-          onClick={(e) => e.stopPropagation()}
+        {/* Close button at the top */}
+        <button
+          onClick={toggleMenu}
+          className="absolute top-4 right-4 p-2 text-gray-600 hover:text-gray-900"
+          aria-label="Close menu"
         >
-          <div className="p-6 space-y-4">
-            {menuItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block py-2 text-gray-600 hover:text-gray-900"
-                onClick={toggleMenu}
-              >
-                {item.text}
-              </Link>
-            ))}
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        {/* Menu items */}
+        <div className="p-6 pt-16 space-y-4">
+          {menuItems.map((item) => (
             <a
-              href="/resume.pdf"
-              download="Agarwal_Kartik.pdf"
-              className="block py-2 text-blue-600 hover:text-blue-800"
-              onClick={toggleMenu}
+              key={item.href}
+              href={item.href}
+              className="block py-2 text-gray-600 hover:text-gray-900 text-lg"
+              onClick={(e) => handleLinkClick(e, item.href)}
             >
-              Download Resume
+              {item.text}
             </a>
-          </div>
+          ))}
+          <a
+            href="/Agarwal_Kartik.pdf"
+            download="Agarwal_Kartik.pdf"
+            className="block py-2 text-blue-600 hover:text-blue-800 text-lg font-medium"
+            onClick={toggleMenu}
+          >
+            Download Resume
+          </a>
         </div>
       </div>
     </div>
