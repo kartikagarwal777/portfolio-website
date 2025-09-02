@@ -15,10 +15,15 @@ const MobileMenu = () => {
     { href: '#experience', text: 'Experience' },
     { href: '#education', text: 'Education' },
     { href: '#projects', text: 'Projects' },
-    { href: '#contact', text: 'Contact' },
+    { href: 'mailto:kartikagarwal777@gmail.com', text: 'Contact', isExternal: true },
   ];
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isExternal?: boolean) => {
+    if (isExternal) {
+      toggleMenu();
+      return;
+    }
+    
     e.preventDefault();
     toggleMenu();
     
@@ -106,7 +111,7 @@ const MobileMenu = () => {
               key={item.href}
               href={item.href}
               className="block py-2 text-gray-600 hover:text-gray-900 text-lg"
-              onClick={(e) => handleLinkClick(e, item.href)}
+              onClick={(e) => handleLinkClick(e, item.href, item.isExternal)}
             >
               {item.text}
             </a>

@@ -59,12 +59,12 @@ const Header = () => {
             >
               Projects
             </Link>
-            <Link 
+            <a 
               href="mailto:kartikagarwal777@gmail.com" 
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
               Contact
-            </Link>
+            </a>
             <a 
               href="/Agarwal_Kartik.pdf"
               download="Agarwal_Kartik.pdf"
