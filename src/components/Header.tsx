@@ -60,7 +60,7 @@ const Header = () => {
               Projects
             </Link>
             <Link 
-              href="#contact" 
+              href="mailto:kartikagarwal777@gmail.com" 
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
               Contact
