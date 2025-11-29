@@ -39,7 +39,7 @@ const Experience = () => {
       ]
     },
     {
-      company: "UCLA",
+      company: "UCLA (Federal Reserve Bank)",
       location: "Los Angeles, CA",
       positions: [
         {
