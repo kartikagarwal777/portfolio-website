@@ -6,16 +6,16 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-6">
             <div>
-                <p className="text-lg text-gray-600 mb-4">
-                    Quantitative Researcher at QMS Capital Management specializing in systematic trading strategies, 
-                    machine learning, and research infrastructure development. I led the firm’s expansion into Emerging Markets FX 
-                    by developing a dynamic universe selection framework and identifying 10+ exploitable alpha strategies 
-                    in this space. My broader research covers FX, Commodities, Equities, and Fixed-Income futures.
-                </p>
-                <p className="text-lg text-gray-600">
-                    With a background in financial engineering and computer science, I build robust research infrastructure 
-                    and predictive models that integrate macro, fundamental, and high-frequency signals to deliver scalable alpha.
-                </p>
+              <p className="text-lg text-gray-600 mb-4">
+                Alpha Quant Researcher at QMS Capital Management with expertise in systematic trading strategies, 
+                machine learning, and quantitative analysis. Experienced in researching and implementing successful 
+                alpha strategies across multiple asset classes including Emerging Markets FX, commodities, equity, 
+                and fixed-income futures.
+              </p>
+              <p className="text-lg text-gray-600">
+                With a unique blend of financial engineering and computer science expertise, I specialize in developing 
+                sophisticated trading strategies and implementing robust quantitative models.
+              </p>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Contact</h3>
@@ -24,14 +24,14 @@ const About = () => {
                   <span className="mr-2">📍</span> Raleigh, NC
                 </p>
                 <p className="flex items-center">
+                  <span className="mr-2">📧</span>
                   <a href="mailto:kartikagarwal777@gmail.com" className="hover:text-blue-600">
-                    <span className="mr-2">📧</span>
                     kartikagarwal777@gmail.com
                   </a>
                 </p>
                 <p className="flex items-center">
-                  <a href="tel:4244409728" className="hover:text-blue-600">
                   <span className="mr-2">📱</span>
+                  <a href="tel:4244409728" className="hover:text-blue-600">
                     (424) 440-9728
                   </a>
                 </p>
@@ -99,19 +99,19 @@ const About = () => {
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
-                      GCP
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
-                      AWS
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
                       Git/Hg/SVN
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
                       Kafka & Redis
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                      GCP
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                      AWS
                     </li>
                   </ul>
                 </div>
@@ -123,14 +123,16 @@ const About = () => {
                 {[
                   "Systematic Trading",
                   "Machine Learning",
-                  "Global Macro Research",
-                  "Alpha Quantitative Research",
+                  "Quantitative Analysis",
+                  "Statistical Arbitrage",
+                  "Alpha Research",
                   "Risk Management",
-                  "Research Infrastructure Development",
+                  "Financial Engineering",
+                  "Data Pipeline Development"
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm flex items-center gap-1 hover:bg-blue-100 transition-colors cursor-pointer"
+                    className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm"
                   >
                     {skill}
                   </span>
@@ -142,16 +144,16 @@ const About = () => {
               <div className="flex flex-wrap gap-2">
                 {[
                   { icon: "⚽", text: "Soccer" },
+                  { icon: "🎾", text: "Tennis" },
                   { icon: "🥋", text: "Martial Arts" },
                   { icon: "🏎️", text: "Car Racing" },
-                  { icon: "🎾", text: "Tennis" },
-                  { icon: "⌚", text: "Horology" },
+                  { icon: "⌚", text: "Watches" },
                   { icon: "🎬", text: "Horror Movies" },
                   { icon: "🎮", text: "Video Games" }
                 ].map((hobby) => (
                   <span
                     key={hobby.text}
-                    className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm flex items-center gap-1 hover:bg-gray-100 transition-colors cursor-pointer"
+                    className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm flex items-center gap-1 hover:bg-gray-100 transition-colors"
                   >
                     <span className="text-base">{hobby.icon}</span>
                     {hobby.text}
