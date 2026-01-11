@@ -9,7 +9,7 @@ const About = () => {
               <p className="text-lg text-gray-600 mb-4">
                 Quantitative Portfolio Manager with experience building and designing investment strategy for a $2B hedge fund. 
                 Focused across all asset classes including equities, currencies, commodities and fixed income. 
-                Previously led a 12-person engineering team delivering software solutions used by 2,000+ organizations worldwide.
+                Previously led a 12-person engineering team delivering software solutions used by 2,500+ organizations worldwide.
               </p>
               {/* <p className="text-lg text-gray-600">
                 With a unique blend of financial engineering and computer science expertise, I specialize in developing 
