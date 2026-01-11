@@ -48,7 +48,7 @@ const About = () => {
                     LinkedIn Profile
                   </a>
                   <a 
-                    href="/resume.pdf" 
+                    href="/Agarwal_Kartik.pdf" 
                     download="Agarwal_Kartik.pdf"
                     className="text-blue-600 hover:text-blue-800 flex items-center"
                   >
