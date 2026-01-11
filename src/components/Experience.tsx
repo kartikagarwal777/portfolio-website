@@ -14,15 +14,23 @@ const Experience = () => {
         }
       ],
       achievements: [
-        "Led firm's expansion into Emerging Markets by developing systematic framework for tradable currencies",
-        "Researched and implemented 10 successful alpha strategies for EM FX universe",
-        "Developed alpha models using ML techniques including Neural Nets(TFT), XGBoost, Affinity Propagation",
-        "Designed Python-based infrastructure for research workflows and data pipelines",
-        "Created predictive signals for forecasting higher frequency metrics",
-        "Constructed proprietary macro indexes for enhanced model inputs",
-        "Incorporated fundamental factors into alpha models",
-        "Researched statistical arbitrage strategy for global commodity and equity futures",
-        "Conducted peer code reviews and model validations"
+        {
+          main: "Directed alpha research across FX, commodity, equity, and fixed income futures resulting in 11 production ready trading strategies",
+          sub: [
+            "Created ML-driven trading strategies (Neural Nets, XGBoost, Affinity Propagation, Kalman Filter, Lasso)",
+            "Innovated proprietary macro indexes (e.g. bond risk premia, country sentiment) for economic-based signals",
+            "Incorporated higher frequency metrics like order flow data to enhance predictive signals"
+          ]
+        },
+        {
+          main: "Introduced Emerging Markets FX trading at the firm",
+          sub: [
+            "Managed the universe selection, portfolio construction, signal weighting and risk management"
+          ]
+        },
+        {
+          main: "Built the firm's Python-based infrastructure from scratch, significantly improving robustness and research velocity"
+        }
       ]
     },
     {
@@ -35,7 +43,9 @@ const Experience = () => {
         }
       ],
       achievements: [
-        "Generated an efficient trading strategy that exploits mispricing in stock returns due to categorization bias between a stock’s official industry classification and its fundamental industry peers identified using Hoberg NLP text-based network industry classification on 10K filings. The firm considered investing $100 million in the strategy"
+        {
+          main: "Developed an NLP-driven trading strategy on U.S. equities by analyzing 10-K filings to uncover peer mispricings"
+        }
       ]
     },
     {
@@ -48,8 +58,12 @@ const Experience = () => {
         }
       ],
       achievements: [
-        "Partnered with Federal Reserve Bank of Philadelphia to quantify COVID policies' impact by using NLP to analyze all US state and local government policy documents",
-        "Analyzed trends and diversification in equity, debt, and real estate across countries"
+        {
+          main: "Applied NLP techniques to quantify the effect of COVID-19 policies on households by analyzing state and local government documents across the U.S."
+        },
+        {
+          main: "Analyzed the effect of world events on trends in equity, debt, and real estate"
+        }
       ]
     },
     {
@@ -62,7 +76,9 @@ const Experience = () => {
         }
       ],
       achievements: [
-        "Managed implementation and deployment of Wealth Management Robo Advisory product for Singapore and Middle East banks"
+        {
+          main: "Implemented and deployed a white-labeled robo-advisory platform for banks across Singapore and the Middle East"
+        }
       ]
     },
     {
@@ -70,13 +86,21 @@ const Experience = () => {
       location: "Chennai, India",
       positions: [
         {
-          title: "Software Engineer",
+          title: "Software Engineer/Product Lead",
           period: "Jun 2017 – Mar 2019"
         }
       ],
       achievements: [
-        "Developed core features of Zoho Zeptomail used by 2.5k+ organisations",
-        "Led team of dozen developers in developing key modules and features"
+        {
+          main: "Built product Zoho Zeptomail from inception to product launch, now being used by 2.5k+ organizations",
+        },
+        { 
+          main: "Spearheaded feature ideation, technical design, and execution to create a competitive product",
+        },
+        {
+          main: 
+            "Led a cross-functional team of 12 developers, designers, testers, marketing and content writers",
+        }
       ]
     }
   ];
@@ -102,7 +126,19 @@ const Experience = () => {
               </div>
               <ul className="list-disc list-inside space-y-2 text-gray-600">
                 {exp.achievements.map((achievement, idx) => (
-                  <li key={idx}>{achievement}</li>
+                  <li key={idx}>
+                    {typeof achievement === 'string' ? achievement : achievement.main}
+                    {achievement.sub && (
+                      <ul className="list-none pl-6 mt-2 space-y-1">
+                        {achievement.sub.map((subItem, subIdx) => (
+                          <li key={subIdx} className="flex items-start">
+                            <span className="mr-2 text-gray-400">o</span>
+                            <span>{subItem}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
                 ))}
               </ul>
             </div>
