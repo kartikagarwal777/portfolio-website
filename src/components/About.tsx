@@ -7,15 +7,14 @@ const About = () => {
           <div className="space-y-6">
             <div>
               <p className="text-lg text-gray-600 mb-4">
-                Alpha Quant Researcher at QMS Capital Management with expertise in systematic trading strategies, 
-                machine learning, and quantitative analysis. Experienced in researching and implementing successful 
-                alpha strategies across multiple asset classes including Emerging Markets FX, commodities, equity, 
-                and fixed-income futures.
+                Quantitative Portfolio Manager with experience building and designing investment strategy for a $2B hedge fund. 
+                Focused across all asset classes including equities, currencies, commodities and fixed income. 
+                Previously led a 12-person engineering team delivering software solutions used by 2,000+ organizations worldwide.
               </p>
-              <p className="text-lg text-gray-600">
+              {/* <p className="text-lg text-gray-600">
                 With a unique blend of financial engineering and computer science expertise, I specialize in developing 
                 sophisticated trading strategies and implementing robust quantitative models.
-              </p>
+              </p> */}
             </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Contact</h3>
