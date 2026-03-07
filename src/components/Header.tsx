@@ -66,8 +66,8 @@ const Header = () => {
               Contact
             </a>
             <a 
-              href="/Agarwal_Kartik.pdf"
-              download="Agarwal_Kartik.pdf"
+              href="/Kartik_Agarwal.pdf"
+              download="Kartik_Agarwal.pdf"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-all hover:scale-105"
             >
               Download Resume

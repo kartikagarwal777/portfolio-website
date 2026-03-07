@@ -20,8 +20,8 @@ export default function Home() {
             <p className="text-xl text-gray-600 animate-fade-in-delay">Alpha Quant Researcher & Former Software Engineer</p>
             <div className="flex justify-center space-x-4 animate-fade-in-delay-2">
               <a 
-                href="/Agarwal_Kartik.pdf"
-                download="Agarwal_Kartik.pdf"
+                href="/Kartik_Agarwal.pdf"
+                download="Kartik_Agarwal.pdf"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 hover:scale-105 transition-all"
               >
                 Download Resume

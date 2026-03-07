@@ -117,8 +117,8 @@ const MobileMenu = () => {
             </a>
           ))}
           <a
-            href="/Agarwal_Kartik.pdf"
-            download="Agarwal_Kartik.pdf"
+            href="/Kartik_Agarwal.pdf"
+            download="Kartik_Agarwal.pdf"
             className="block py-2 text-blue-600 hover:text-blue-800 text-lg font-medium"
             onClick={toggleMenu}
           >

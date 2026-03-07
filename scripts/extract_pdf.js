@@ -26,7 +26,7 @@ async function extractText(pdfPath) {
 
 (async () => {
   try {
-    const pdfPath = path.join(__dirname, '..', 'public', 'Agarwal_Kartik.pdf');
+    const pdfPath = path.join(__dirname, '..', 'public', 'Kartik_Agarwal.pdf');
     const text = await extractText(pdfPath);
     const outPath = path.join(__dirname, '..', 'tmp', 'resume_text.txt');
     fs.mkdirSync(path.dirname(outPath), { recursive: true });

@@ -5,31 +5,31 @@ const Experience = () => {
       location: "Durham, NC",
       positions: [
         {
-          title: "Associate (Alpha Quant Researcher)",
-          period: "Feb 2023 – Present"
-        },
-        {
-          title: "Senior Analyst",
-          period: "Jul 2021 - Jan 2023"
+          title: "Quant Researcher",
+          period: "Jul 2021 – Oct 2025"
         }
       ],
       achievements: [
         {
-          main: "Directed alpha research across FX, commodity, equity, and fixed income futures resulting in 11 production ready trading strategies",
+          main: "Directed alpha research across FX, commodity, equity, and fixed income futures, resulting in 11 production-ready trading strategies.",
           sub: [
-            "Created ML-driven trading strategies (Neural Nets, XGBoost, Affinity Propagation, Kalman Filter, Lasso)",
-            "Innovated proprietary macro indexes (e.g. bond risk premia, country sentiment) for economic-based signals",
-            "Incorporated higher frequency metrics like order flow data to enhance predictive signals"
+            "Innovated economic-based macro predictors (e.g. bond risk premia, country sentiment, inflation expectation, gdp nowcast) using country fundamentals and alternative data",
+            "Researched ML-driven trading strategies (Neural Nets, XGBoost, Affinity Propagation, Kalman Filter, Lasso)",
+            "Incorporated higher frequency metrics like order flow data to enhance predictive signals",
+            "Evaluated alternative data based on signal orthogonality and economics; negotiated pricing and ongoing vendor communication"
           ]
         },
         {
-          main: "Introduced Emerging Markets FX trading at the firm",
+          main: "Introduced Emerging Markets FX trading at the firm.",
           sub: [
-            "Managed the universe selection, portfolio construction, signal weighting and risk management"
+            "Managed the signal research, portfolio construction, regime modelling and risk management"
           ]
         },
         {
-          main: "Built the firm's Python-based infrastructure from scratch, significantly improving robustness and research velocity"
+          main: "Designed and implemented a modular research and backtesting framework with integrated data pipelines, transaction cost modeling, performance attribution, and production monitoring."
+        },
+        {
+          main: "Interfaced with global sell-side desks and academia to aggregate broker views, synthesize macro themes, and translate discretionary views into systematic trade hypotheses."
         }
       ]
     },
@@ -94,12 +94,12 @@ const Experience = () => {
         {
           main: "Built product Zoho Zeptomail from inception to product launch, now being used by 2.5k+ organizations",
         },
-        { 
-          main: "Spearheaded feature ideation, technical design, and execution to create a competitive product",
-        },
         {
           main: 
             "Led a cross-functional team of 12 developers, designers, testers, marketing and content writers",
+        },
+        { 
+          main: "Spearheaded feature ideation, technical design, and execution to create a competitive product",
         }
       ]
     }
