@@ -11,7 +11,7 @@ export default function Home() {
   const heroStats = [
     { value: '11', label: 'Production-ready strategies' },
     { value: '$2B', label: 'Hedge fund research context' },
-    { value: '8+', label: 'Years across quant + engineering' },
+    { value: '6+', label: 'Years across quant + engineering' },
     { value: '12', label: 'Cross-functional team led' },
   ];
 

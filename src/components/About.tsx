@@ -44,8 +44,9 @@ const About = () => {
                 insights into resilient live systems.
               </p>
               <p className="mt-4 text-slate-600">
-                Before moving fully into quant investing, I led software teams and shipped products at scale. That execution
-                background helps me build workflows that are fast to iterate, easy to monitor, and robust in production.
+                Before moving fully into quant investing, I led software teams and built a product now used by 2.5k+
+                organizations. That execution background helps me build workflows that are fast to iterate, easy to
+                monitor, and robust in production.
               </p>
             </article>
             <article className="surface-panel p-6 sm:p-7">
