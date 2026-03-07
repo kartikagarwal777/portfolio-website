@@ -6,12 +6,25 @@ import MobileMenu from './MobileMenu';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const emailAddress = 'kartikagarwal777@gmail.com';
   const navItems = [
     { href: '#about', label: 'About' },
     { href: '#experience', label: 'Experience' },
     { href: '#education', label: 'Education' },
     { href: '#projects', label: 'Projects' },
   ];
+
+  const handleCopyEmail = async () => {
+    try {
+      if (!navigator.clipboard) return;
+      await navigator.clipboard.writeText(emailAddress);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,12 +68,32 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
-              <a
-                href="mailto:kartikagarwal777@gmail.com"
-                className="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 hover:bg-white/90 hover:text-slate-900"
-              >
-                Contact
-              </a>
+              <div className="group relative">
+                <a
+                  href={`mailto:${emailAddress}`}
+                  className="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 hover:bg-white/90 hover:text-slate-900"
+                >
+                  Contact
+                </a>
+                <div className="pointer-events-none absolute left-1/2 top-full z-20 mt-2 w-72 -translate-x-1/2 translate-y-2 rounded-xl border border-slate-200 bg-white/95 p-3 opacity-0 shadow-[0_22px_38px_rgba(15,23,42,0.15)] backdrop-blur transition-all duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">Email</p>
+                  <div className="mt-2 flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-2">
+                    <a
+                      href={`mailto:${emailAddress}`}
+                      className="min-w-0 flex-1 truncate text-sm font-medium text-slate-700 hover:text-cyan-700"
+                    >
+                      {emailAddress}
+                    </a>
+                    <button
+                      type="button"
+                      onClick={handleCopyEmail}
+                      className="rounded-md border border-slate-300 bg-white px-2.5 py-1 text-xs font-semibold text-slate-700 hover:border-slate-400 hover:text-slate-900"
+                    >
+                      {copied ? 'Copied' : 'Copy'}
+                    </button>
+                  </div>
+                </div>
+              </div>
               <a
                 href="/Kartik_Agarwal.pdf"
                 download="Kartik_Agarwal.pdf"
