@@ -34,6 +34,14 @@ export default function Home() {
               >
                 View LinkedIn
               </a>
+              <a 
+                href="https://kartikag.substack.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 hover:scale-105 transition-all"
+              >
+                Read Substack
+              </a>
             </div>
           </div>
         </section>
