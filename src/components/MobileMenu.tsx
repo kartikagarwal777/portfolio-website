@@ -98,7 +98,7 @@ const MobileMenu = ({ isScrolled }: MobileMenuProps) => {
 
       {/* Menu */}
       <div
-        className={`fixed right-0 top-0 z-[51] h-screen w-[20rem] max-w-[86vw] transform overflow-y-auto border-l border-slate-200 bg-white/95 shadow-2xl backdrop-blur-md transition-transform duration-300 ease-in-out ${
+        className={`fixed right-0 top-0 z-[51] h-screen w-screen transform overflow-y-auto border-l border-slate-200 bg-white/95 shadow-2xl backdrop-blur-md transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         onClick={(e) => e.stopPropagation()}
