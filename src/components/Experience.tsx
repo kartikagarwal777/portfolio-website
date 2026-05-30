@@ -53,7 +53,7 @@ const Experience = () => {
       location: 'San Francisco, CA',
       positions: [
         {
-          title: 'AFP',
+          title: 'Quant Research',
           period: 'Mar 2020 – Dec 2020',
         },
       ],
@@ -64,7 +64,7 @@ const Experience = () => {
       ],
     },
     {
-      company: 'UCLA (Federal Reserve Bank)',
+      company: 'UCLA (Federal Reserve Bank of Philadelphia)',
       location: 'Los Angeles, CA',
       positions: [
         {
