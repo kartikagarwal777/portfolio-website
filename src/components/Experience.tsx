@@ -49,21 +49,6 @@ const Experience = () => {
       ],
     },
     {
-      company: 'GIC (Singapore Sovereign Wealth Fund)',
-      location: 'San Francisco, CA',
-      positions: [
-        {
-          title: 'Quant Research',
-          period: 'Mar 2020 – Dec 2020',
-        },
-      ],
-      achievements: [
-        {
-          main: 'Developed an NLP-driven trading strategy on U.S. equities by analyzing 10-K filings to uncover peer mispricings.',
-        },
-      ],
-    },
-    {
       company: 'UCLA (Federal Reserve Bank of Philadelphia)',
       location: 'Los Angeles, CA',
       positions: [
@@ -78,6 +63,21 @@ const Experience = () => {
         },
         {
           main: 'Analyzed the effect of world events on trends in equity, debt, and real estate.',
+        },
+      ],
+    },
+    {
+      company: 'GIC (Singapore Sovereign Wealth Fund)',
+      location: 'San Francisco, CA',
+      positions: [
+        {
+          title: 'Quant Research',
+          period: 'Mar 2020 – Dec 2020',
+        },
+      ],
+      achievements: [
+        {
+          main: 'Developed an NLP-driven trading strategy on U.S. equities by analyzing 10-K filings to uncover peer mispricings.',
         },
       ],
     },
