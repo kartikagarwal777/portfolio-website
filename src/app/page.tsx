@@ -6,6 +6,7 @@ import Experience from '@/components/Experience'
 import Education from '@/components/Education'
 import Projects from '@/components/Projects'
 import ScrollToTop from '@/components/ScrollToTop'
+import PortfolioChatbot from '@/components/PortfolioChatbot'
 
 export default function Home() {
   const heroStats = [
@@ -33,6 +34,7 @@ export default function Home() {
       </div>
       <Header />
       <ScrollToTop />
+      <PortfolioChatbot />
       <div className="relative pt-28 md:pt-32">
         {/* Hero Section */}
         <section className="pb-20 md:pb-24">
