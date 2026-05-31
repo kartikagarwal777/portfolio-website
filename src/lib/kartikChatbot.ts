@@ -88,16 +88,38 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'summarize',
       'profile',
       'resume',
+      'cv',
       'about',
       'overview',
       'best',
       'strength',
       'strengths',
+      'strong',
       'hire',
       'hiring',
       'investor',
       'investors',
       'manager',
+      'candidate',
+      'differentiated',
+      'differentiation',
+      'pitch',
+      'elevator pitch',
+      'story',
+      'career',
+      'timeline',
+      'background',
+      'professional background',
+      'track record',
+      'achievements',
+      'achievement',
+      'accomplishments',
+      'impact',
+      'good fit',
+      'fit',
+      'quant pm',
+      'portfolio manager',
+      'trader',
       'portfolio',
       'alpha',
       'quant',
@@ -118,6 +140,56 @@ const knowledgeEntries: KnowledgeEntry[] = [
     priority: 6,
   },
   {
+    id: 'latest-role',
+    category: 'Experience',
+    title: 'Most Recent Role',
+    headline:
+      "Kartik's most recent role in the curated profile is Quant Researcher at QMS Capital Management from July 2021 to October 2025.",
+    points: [
+      'His resume, website, and public LinkedIn profile list QMS Capital Management in Durham, NC as his latest professional role.',
+      'At QMS, he directed cross-asset alpha research, introduced Emerging Markets FX trading, researched ML-driven strategies, and built production research infrastructure.',
+      'I do not have a verified newer employer or current-role update in the curated sources, so I describe QMS as the most recent listed role rather than claiming a current employer.',
+    ],
+    keywords: [
+      'current job',
+      'current role',
+      'current employer',
+      'currently',
+      'latest job',
+      'latest role',
+      'latest employer',
+      'most recent job',
+      'most recent role',
+      'most recent employer',
+      'recent role',
+      'recent employer',
+      'where work',
+      'where works',
+      'where does he work',
+      'work now',
+      'after qms',
+      'company now',
+      'job now',
+      'employer',
+      'role',
+      'job',
+      'company',
+      'still at qms',
+      'leave qms',
+      'left qms',
+      'qms dates',
+      'career timeline',
+      'after qms',
+    ],
+    sources: ['resume', 'website', 'linkedin'],
+    suggestions: [
+      'Tell me about QMS Capital',
+      'Summarize his experience',
+      'What is Kartik best at?',
+    ],
+    priority: 9,
+  },
+  {
     id: 'qms',
     category: 'Experience',
     title: 'QMS Capital Management',
@@ -135,6 +207,9 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'hedge fund',
       'durham',
       'quant researcher',
+      'quant pm',
+      'portfolio manager',
+      'trader',
       'alpha',
       'production strategies',
       'trading strategies',
@@ -152,6 +227,7 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'backtesting',
       'monitoring',
       'transaction costs',
+      'performance attribution',
       'research infrastructure',
       'cross asset',
       'cross-asset',
@@ -162,6 +238,13 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'order-flow',
       'sell side',
       'broker views',
+      'currency',
+      'currencies',
+      'emfx',
+      'regime modelling',
+      'regime modeling',
+      'universe selection',
+      'signal weighting',
     ],
     sources: ['resume', 'website', 'linkedin'],
     suggestions: [
@@ -187,6 +270,7 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'machine learning',
       'ml',
       'ai',
+      'ai experience',
       'model',
       'models',
       'signals',
@@ -228,8 +312,8 @@ const knowledgeEntries: KnowledgeEntry[] = [
     points: [
       'At Zoho ManageEngine, he helped build Zoho ZeptoMail from inception to launch; the site and resume note that it is now used by 2.5k+ organizations.',
       'He led a cross-functional team of 12 developers, designers, testers, marketing, and content contributors.',
+      'His public LinkedIn recommendations also cite concrete Zoho delivery wins: more secure email tracking, 300% higher mail-sending capacity, throttling modules, and stats modules.',
       'At WeInvest, he implemented and deployed a white-labeled robo-advisory platform for banks across Singapore and the Middle East.',
-      'This background is useful for investors and hiring teams because he can build research ideas into reliable production workflows.',
     ],
     keywords: [
       'software',
@@ -250,12 +334,22 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'team',
       '12',
       'cross-functional',
+      'cross functional',
       'production',
       'platform',
       'launch',
       'organizations',
       '2500',
       '2.5k',
+      'email tracking',
+      'mail sending capacity',
+      'throttling module',
+      'stats module',
+      'full stack',
+      'full-stack',
+      'backend',
+      'frontend',
+      'managerial',
     ],
     sources: ['resume', 'website', 'linkedin'],
     suggestions: [
@@ -278,6 +372,7 @@ const knowledgeEntries: KnowledgeEntry[] = [
     ],
     keywords: [
       'ucla',
+      'before qms',
       'federal reserve',
       'philadelphia',
       'fed',
@@ -321,9 +416,14 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'education',
       'school',
       'university',
+      'study',
+      'studied',
+      'academic',
+      'academic background',
       'degree',
       'ucla',
       'anderson',
+      'ucla anderson',
       'master',
       'financial engineering',
       'mfe',
@@ -360,6 +460,7 @@ const knowledgeEntries: KnowledgeEntry[] = [
     keywords: [
       'competitions',
       'competition',
+      'case competitions',
       'booth',
       'chicago booth',
       'chicago booth investment competition',
@@ -369,6 +470,7 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'cfa irc',
       'snapchat',
       'represented ucla',
+      'represent ucla',
     ],
     sources: ['resume', 'website', 'linkedin'],
     suggestions: [
@@ -403,12 +505,14 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'google cloud',
       'gcp',
       'survivorship bias',
+      'dynamic universe selection',
       'sharpe',
       '3.52',
       'daily turnover',
       'invoicing',
       'startup',
       'student led fund',
+      'ucla investment fund',
       'quantitative investment fund',
       'competition',
       'portfolio',
@@ -435,6 +539,7 @@ const knowledgeEntries: KnowledgeEntry[] = [
     ],
     keywords: [
       'linkedin projects',
+      'linkedin project',
       'asset hedging',
       'bayesian',
       'bayesian estimation',
@@ -544,6 +649,10 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'referrals',
       'testimonial',
       'testimonials',
+      'people say',
+      'coworkers say',
+      'managers say',
+      'social proof',
       'endorsement',
       'endorsements',
       'linkedin recommendations',
@@ -567,9 +676,11 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'stats module',
       'leadership',
       'integrity',
+      'dependable',
       'dependability',
       'communication',
       'under pressure',
+      'good under pressure',
     ],
     sources: ['linkedin'],
     suggestions: [
@@ -598,6 +709,8 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'stack',
       'technology',
       'programming',
+      'database',
+      'databases',
       'language',
       'languages',
       'python',
@@ -813,6 +926,7 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'link',
       'download',
       'resume',
+      'cv',
       'pdf',
       'website',
       'linkedin',
@@ -842,6 +956,7 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'interests',
       'personal',
       'hobbies',
+      'outside work',
       'soccer',
       'football',
       'martial arts',
@@ -929,8 +1044,10 @@ const intentBoosts: Record<string, string[]> = {
   coding: ['skills', 'python', 'programming'],
   contact: ['contact', 'email', 'phone', 'location'],
   cross: ['cross asset', 'cross-asset', 'fx', 'commodities', 'equities', 'fixed income'],
+  current: ['latest role', 'most recent role', 'qms'],
   education: ['education', 'school', 'ucla', 'vit'],
   email: ['contact', 'email'],
+  employer: ['latest role', 'most recent role', 'qms'],
   experience: ['experience', 'qms', 'gic', 'ucla', 'zoho', 'weinvest'],
   highlight: ['linkedin', 'profile'],
   highlights: ['linkedin', 'profile'],
@@ -938,13 +1055,15 @@ const intentBoosts: Record<string, string[]> = {
   investor: ['profile', 'alpha', 'portfolio', 'strategy', 'macro'],
   linkedin: ['linkedin', 'recommendations', 'public profile'],
   location: ['contact', 'raleigh'],
-  latest: ['writing', 'substack', 'recent'],
+  job: ['latest role', 'most recent role', 'qms'],
+  latest: ['writing', 'substack', 'recent', 'latest role'],
   language: ['languages', 'english', 'hindi'],
   languages: ['languages', 'english', 'hindi'],
   ml: ['machine learning', 'xgboost', 'nlp', 'signals'],
   order: ['order flow', 'qms', 'signals'],
   os: ['operating systems', 'windows', 'mac', 'ubuntu'],
   phone: ['contact', 'phone'],
+  pitch: ['profile', 'summary', 'strengths'],
   post: ['writing', 'substack', 'article'],
   posts: ['writing', 'substack', 'articles'],
   projects: ['projects', 'nifty', 'statistical arbitrage'],
@@ -963,6 +1082,8 @@ const intentBoosts: Record<string, string[]> = {
   referral: ['recommendations', 'references', 'linkedin'],
   referrals: ['recommendations', 'references', 'linkedin'],
   resume: ['resume', 'profile', 'summary', 'experience'],
+  role: ['latest role', 'most recent role', 'qms'],
+  story: ['profile', 'summary', 'career'],
   testimonial: ['recommendations', 'references', 'linkedin'],
   testimonials: ['recommendations', 'references', 'linkedin'],
   download: ['download', 'resources', 'pdf'],
@@ -977,6 +1098,19 @@ const intentBoosts: Record<string, string[]> = {
 function normalize(text: string) {
   return text
     .toLowerCase()
+    .replace(/what['’]s/g, 'what is')
+    .replace(/who['’]s/g, 'who is')
+    .replace(/kartik['’]s/g, 'kartik')
+    .replace(/\bkarthik\b/g, 'kartik')
+    .replace(/\blinkdin\b/g, 'linkedin')
+    .replace(/\blinkedin\b/g, 'linkedin')
+    .replace(/\breccomendations?\b/g, 'recommendations')
+    .replace(/\brecomendations?\b/g, 'recommendations')
+    .replace(/\breferneces?\b/g, 'references')
+    .replace(/\bexperince\b/g, 'experience')
+    .replace(/\blangauges?\b/g, 'languages')
+    .replace(/\blenguages?\b/g, 'languages')
+    .replace(/\bquantative\b/g, 'quantitative')
     .replace(/linked\s*in/g, 'linkedin')
     .replace(/e-mail/g, 'email')
     .replace(/[^a-z0-9+.#$-]+/g, ' ')
@@ -992,17 +1126,31 @@ function tokenize(text: string) {
   return Array.from(new Set([...baseTokens, ...boostedTokens]));
 }
 
-function countOccurrences(haystack: string, needle: string) {
-  if (!needle) return 0;
-  return haystack.split(needle).length - 1;
-}
-
 function escapeRegExp(text: string) {
   return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function includesWholeTerm(text: string, term: string) {
-  return new RegExp(`\\b${escapeRegExp(term).replace(/\s+/g, '\\s+')}\\b`).test(text);
+  const normalizedTerm = normalize(term);
+  if (!normalizedTerm) return false;
+
+  return new RegExp(
+    `(^|[^a-z0-9])${escapeRegExp(normalizedTerm).replace(/\s+/g, '\\s+')}($|[^a-z0-9])`
+  ).test(text);
+}
+
+function countWholeTermOccurrences(text: string, term: string) {
+  const normalizedTerm = normalize(term);
+  if (!normalizedTerm) return 0;
+
+  return Array.from(
+    text.matchAll(
+      new RegExp(
+        `(^|[^a-z0-9])${escapeRegExp(normalizedTerm).replace(/\s+/g, '\\s+')}($|[^a-z0-9])`,
+        'g'
+      )
+    )
+  ).length;
 }
 
 function entrySearchText(entry: KnowledgeEntry) {
@@ -1028,14 +1176,14 @@ function scoreEntry(entry: KnowledgeEntry, question: string, tokens: string[]) {
   let score = entry.priority ?? 0;
 
   for (const token of tokens) {
-    if (keywordText.includes(token)) score += 8;
-    if (titleText.includes(token)) score += 5;
-    score += Math.min(countOccurrences(searchText, token), 4);
+    if (includesWholeTerm(keywordText, token)) score += 8;
+    if (includesWholeTerm(titleText, token)) score += 5;
+    score += Math.min(countWholeTermOccurrences(searchText, token), 4);
   }
 
   for (const keyword of entry.keywords) {
     const normalizedKeyword = normalize(keyword);
-    if (normalizedKeyword.length > 2 && normalizedQuestion.includes(normalizedKeyword)) {
+    if (normalizedKeyword.length > 2 && includesWholeTerm(normalizedQuestion, normalizedKeyword)) {
       score += normalizedKeyword.includes(' ') ? 14 : 7;
     }
   }
@@ -1061,18 +1209,87 @@ function replyFromEntry(entry: KnowledgeEntry): ChatbotReply {
   };
 }
 
+function stripConversationalWrappers(question: string) {
+  return question
+    .replace(/^please\s+/, '')
+    .replace(/\s+please$/, '')
+    .replace(/^(hi|hello|hey),?\s+/, '')
+    .replace(/^as\s+a\s+hiring\s+manager,?\s+/, '')
+    .replace(/^as\s+a\s+recruiter,?\s+/, '')
+    .replace(/^as\s+an\s+investor,?\s+/, '')
+    .replace(/^i\s+am\s+an\s+investor\.?\s+/, '')
+    .replace(/^i\s+m\s+an\s+investor\.?\s+/, '')
+    .replace(/^can\s+you\s+answer\s+this:?\s+/, '')
+    .replace(/^ignore\s+all\s+prior\s+instructions\.?\s+/, '')
+    .trim();
+}
+
 function isGreeting(question: string) {
   const normalizedQuestion = normalize(question);
-  return ['hi', 'hello', 'hey', 'yo'].includes(normalizedQuestion);
+  const strippedQuestion = stripConversationalWrappers(normalizedQuestion);
+  const greetings = [
+    'hi',
+    'hi there',
+    'hello',
+    'hello there',
+    'hey',
+    'hey there',
+    'yo',
+    'good morning',
+    'good afternoon',
+    'good evening',
+    'thanks',
+    'thank you',
+    'thx',
+    'cool thanks',
+  ];
+
+  return greetings.includes(normalizedQuestion) || greetings.includes(strippedQuestion);
+}
+
+function isHelpQuestion(question: string) {
+  const normalizedQuestion = normalize(question);
+  const strippedQuestion = stripConversationalWrappers(normalizedQuestion);
+
+  return (
+    ['help', 'menu', 'start over', 'reset', 'restart', 'what do you know'].includes(strippedQuestion) ||
+    strippedQuestion.includes('what can you answer') ||
+    strippedQuestion.includes('what do you know') ||
+    strippedQuestion.includes('what can i ask') ||
+    strippedQuestion.includes('how does this work') ||
+    strippedQuestion.includes('who are you') ||
+    strippedQuestion.includes('what are you') ||
+    strippedQuestion.includes('are you a bot') ||
+    strippedQuestion.includes('are you ai') ||
+    strippedQuestion.includes('tell me about yourself')
+  );
 }
 
 function isProfileQuestion(question: string) {
   const normalizedQuestion = normalize(question);
+  const strippedQuestion = stripConversationalWrappers(normalizedQuestion);
 
   return (
-    /^(who|what)\s+(is|s)\s+(kartik|kartik agarwal|he)$/.test(normalizedQuestion) ||
-    /^(tell|describe)\s+me\s+about\s+(kartik|kartik agarwal|him)$/.test(normalizedQuestion) ||
-    /^(about|profile|overview)\s+(kartik|kartik agarwal)$/.test(normalizedQuestion)
+    ['kartik', 'kartik agarwal', 'professional summary', 'overview please', 'elevator pitch'].includes(
+      strippedQuestion
+    ) ||
+    /^(who|what)\s+(is|s)\s+(kartik|kartik agarwal|he)$/.test(strippedQuestion) ||
+    /^(tell|describe)\s+me\s+about\s+(kartik|kartik agarwal|him)$/.test(strippedQuestion) ||
+    /^(about|profile|overview)\s+(kartik|kartik agarwal)$/.test(strippedQuestion) ||
+    strippedQuestion.includes('who is kartik') ||
+    strippedQuestion.includes('who kartik is') ||
+    strippedQuestion.includes('tell me who kartik is') ||
+    strippedQuestion.includes('describe kartik') ||
+    strippedQuestion.includes('how would you describe kartik') ||
+    strippedQuestion.includes('what is his background') ||
+    strippedQuestion.includes('what is kartik background') ||
+    strippedQuestion.includes('professional background') ||
+    strippedQuestion.includes('good fit') ||
+    strippedQuestion.includes('quick pitch') ||
+    strippedQuestion.includes('his story') ||
+    strippedQuestion.includes('what kind of candidate') ||
+    strippedQuestion.includes('what makes him differentiated') ||
+    strippedQuestion.includes('why is he strong')
   );
 }
 
@@ -1087,17 +1304,26 @@ function isUnsupportedPersonalQuestion(question: string) {
     'birthday',
     'bisexual',
     'caste',
+    'compensation',
     'citizen',
     'citizenship',
+    'children',
+    'criminal record',
     'date of birth',
     'disability',
     'disabled',
+    'ead',
     'ethnicity',
     'gay',
     'girlfriend',
     'green card',
+    'green-card',
     'health',
+    'height',
+    'h-1b',
     'h1b',
+    'hindu',
+    'home address',
     'immigration',
     'lesbian',
     'lgbt',
@@ -1107,23 +1333,35 @@ function isUnsupportedPersonalQuestion(question: string) {
     'medical',
     'nationality',
     'political belief',
+    'political beliefs',
     'politics',
     'queer',
     'race',
     'religion',
     'salary',
+    'shoe size',
+    'social security number',
     'sponsor',
     'sponsorship',
     'sexual orientation',
     'sexuality',
+    'ssn',
     'straight',
     'transgender',
     'visa',
     'wife',
+    'weight',
+    'work authorisation',
     'work authorization',
+    'work permit',
   ];
 
-  return unsupportedTerms.some((term) => includesWholeTerm(normalizedQuestion, term));
+  return (
+    unsupportedTerms.some((term) => includesWholeTerm(normalizedQuestion, term)) ||
+    /^(is|are|was)\s+(kartik|he)\s+indian$/.test(normalizedQuestion) ||
+    normalizedQuestion.includes('from india') ||
+    normalizedQuestion.includes('authorized to work')
+  );
 }
 
 function isRecommendationsQuestion(question: string) {
@@ -1142,35 +1380,111 @@ function isRecommendationsQuestion(question: string) {
     'testimonials',
   ];
 
-  return recommendationTerms.some((term) => normalizedQuestion.includes(term));
+  return (
+    recommendationTerms.some((term) => includesWholeTerm(normalizedQuestion, term)) ||
+    normalizedQuestion.includes('people say about') ||
+    normalizedQuestion.includes('coworkers say') ||
+    normalizedQuestion.includes('managers say') ||
+    normalizedQuestion.includes('social proof')
+  );
 }
 
-function getDirectTopicEntry(question: string) {
+function isLatestRoleQuestion(question: string) {
   const normalizedQuestion = normalize(question);
 
-  if (
-    (normalizedQuestion.includes('programming language') || normalizedQuestion.includes('coding language')) ||
-    (normalizedQuestion.includes('languages') &&
-      (includesWholeTerm(normalizedQuestion, 'code') ||
-        includesWholeTerm(normalizedQuestion, 'coding') ||
-        includesWholeTerm(normalizedQuestion, 'programming'))) ||
-    (includesWholeTerm(normalizedQuestion, 'python') ||
-      includesWholeTerm(normalizedQuestion, 'java') ||
-      includesWholeTerm(normalizedQuestion, 'matlab') ||
-      includesWholeTerm(normalizedQuestion, 'sql'))
-  ) {
-    return knowledgeEntries.find((entry) => entry.id === 'skills');
-  }
+  return (
+    normalizedQuestion.includes('current job') ||
+    normalizedQuestion.includes('current role') ||
+    normalizedQuestion.includes('current employer') ||
+    normalizedQuestion.includes('latest job') ||
+    normalizedQuestion.includes('latest role') ||
+    normalizedQuestion.includes('latest employer') ||
+    normalizedQuestion.includes('most recent job') ||
+    normalizedQuestion.includes('most recent role') ||
+    normalizedQuestion.includes('most recent employer') ||
+    normalizedQuestion.includes('work most recently') ||
+    normalizedQuestion.includes('work now') ||
+    normalizedQuestion.includes('company now') ||
+    normalizedQuestion.includes('job now') ||
+    normalizedQuestion.includes('after qms') ||
+    normalizedQuestion.includes('still at qms') ||
+    normalizedQuestion.includes('leave qms') ||
+    normalizedQuestion.includes('left qms') ||
+    /where\s+(does\s+)?(kartik|he)\s+work/.test(normalizedQuestion) ||
+    /what\s+company\s+(is\s+)?(kartik|he)\s+(at|with)/.test(normalizedQuestion)
+  );
+}
 
-  if (
-    normalizedQuestion.includes('competition') ||
-    normalizedQuestion.includes('chicago booth') ||
-    normalizedQuestion.includes('cfa irc') ||
-    includesWholeTerm(normalizedQuestion, 'snapchat')
-  ) {
-    return knowledgeEntries.find((entry) => entry.id === 'competitions');
-  }
+function isInterestsQuestion(question: string) {
+  const normalizedQuestion = normalize(question);
 
+  return (
+    normalizedQuestion.includes('outside work') ||
+    includesWholeTerm(normalizedQuestion, 'hobby') ||
+    includesWholeTerm(normalizedQuestion, 'hobbies') ||
+    includesWholeTerm(normalizedQuestion, 'interests') ||
+    includesWholeTerm(normalizedQuestion, 'sports') ||
+    includesWholeTerm(normalizedQuestion, 'soccer') ||
+    includesWholeTerm(normalizedQuestion, 'football') ||
+    normalizedQuestion.includes('martial arts') ||
+    includesWholeTerm(normalizedQuestion, 'tennis') ||
+    normalizedQuestion.includes('car racing') ||
+    includesWholeTerm(normalizedQuestion, 'horology') ||
+    includesWholeTerm(normalizedQuestion, 'watches') ||
+    normalizedQuestion.includes('horror movies') ||
+    normalizedQuestion.includes('video games')
+  );
+}
+
+function isUnverifiedCredentialQuestion(question: string) {
+  const normalizedQuestion = normalize(question);
+
+  return (
+    includesWholeTerm(normalizedQuestion, 'cfa') &&
+    (includesWholeTerm(normalizedQuestion, 'charter') || includesWholeTerm(normalizedQuestion, 'charterholder'))
+  );
+}
+
+function isUnsupportedLanguageQuestion(question: string) {
+  const normalizedQuestion = normalize(question);
+  const unlistedLanguages = [
+    'arabic',
+    'bengali',
+    'french',
+    'german',
+    'gujarati',
+    'japanese',
+    'korean',
+    'mandarin',
+    'punjabi',
+    'spanish',
+    'tamil',
+    'telugu',
+  ];
+
+  return (
+    unlistedLanguages.some((language) => includesWholeTerm(normalizedQuestion, language)) &&
+    (normalizedQuestion.includes('speak') ||
+      normalizedQuestion.includes('spoken') ||
+      normalizedQuestion.includes('language') ||
+      normalizedQuestion.includes('proficiency'))
+  );
+}
+
+function getUnknownProfileReply(): ChatbotReply {
+  return {
+    headline: "I do not have that in Kartik's curated profile yet.",
+    points: [
+      'I can answer reliably about his resume, website, public LinkedIn profile, Substack writing, skills, projects, education, and contact details.',
+      'For something more specific, the safest next step is to contact Kartik directly at kartikagarwal777@gmail.com.',
+    ],
+    sources: [],
+    suggestions: fallbackSuggestions,
+    isFallback: true,
+  };
+}
+
+function getDirectTopicEntryForLinkedInProject(normalizedQuestion: string) {
   if (
     (includesWholeTerm(normalizedQuestion, 'linkedin') && normalizedQuestion.includes('project')) ||
     normalizedQuestion.includes('accounting fundamentals') ||
@@ -1189,6 +1503,193 @@ function getDirectTopicEntry(question: string) {
     includesWholeTerm(normalizedQuestion, 'paper')
   ) {
     return knowledgeEntries.find((entry) => entry.id === 'linkedin-projects');
+  }
+
+  return undefined;
+}
+
+function getDirectTopicEntry(question: string) {
+  const normalizedQuestion = normalize(question);
+
+  if (
+    normalizedQuestion.includes('cross functional') ||
+    normalizedQuestion.includes('cross-functional') ||
+    normalizedQuestion.includes('email tracking') ||
+    normalizedQuestion.includes('mail sending capacity') ||
+    normalizedQuestion.includes('throttling module') ||
+    normalizedQuestion.includes('stats module') ||
+    normalizedQuestion.includes('full stack') ||
+    normalizedQuestion.includes('full-stack') ||
+    includesWholeTerm(normalizedQuestion, 'backend') ||
+    includesWholeTerm(normalizedQuestion, 'frontend') ||
+    includesWholeTerm(normalizedQuestion, 'managerial') ||
+    normalizedQuestion.includes('team size') ||
+    normalizedQuestion.includes('startup engineering')
+  ) {
+    return knowledgeEntries.find((entry) => entry.id === 'engineering');
+  }
+
+  if (normalizedQuestion.includes('before qms')) {
+    return knowledgeEntries.find((entry) => entry.id === 'previous-research');
+  }
+
+  if (
+    normalizedQuestion.includes('where did he study') ||
+    normalizedQuestion.includes('academic background') ||
+    normalizedQuestion.includes('ucla anderson') ||
+    normalizedQuestion.includes('what is his degree') ||
+    normalizedQuestion.includes('what school') ||
+    normalizedQuestion.includes('where did he go to school')
+  ) {
+    return knowledgeEntries.find((entry) => entry.id === 'education');
+  }
+
+  if (
+    normalizedQuestion.includes('represent ucla') ||
+    normalizedQuestion.includes('represented ucla') ||
+    normalizedQuestion.includes('case competition')
+  ) {
+    return knowledgeEntries.find((entry) => entry.id === 'competitions');
+  }
+
+  if (
+    normalizedQuestion.includes('what has he built') ||
+    normalizedQuestion.includes('dynamic universe selection') ||
+    normalizedQuestion.includes('google cloud strategy') ||
+    normalizedQuestion.includes('indian stock market') ||
+    normalizedQuestion.includes('india stock market') ||
+    normalizedQuestion.includes('indian equities') ||
+    normalizedQuestion.includes('survivorship bias') ||
+    normalizedQuestion.includes('daily turnover') ||
+    normalizedQuestion.includes('ucla investment fund')
+  ) {
+    return knowledgeEntries.find((entry) => entry.id === 'projects');
+  }
+
+  if (
+    normalizedQuestion.includes('stock model') ||
+    normalizedQuestion.includes('stock market prediction') ||
+    normalizedQuestion.includes('stock prediction') ||
+    (includesWholeTerm(normalizedQuestion, 'ridge') && includesWholeTerm(normalizedQuestion, 'sgd'))
+  ) {
+    return knowledgeEntries.find((entry) => entry.id === 'early-technical-projects');
+  }
+
+  if (
+    normalizedQuestion.includes('machine learning') ||
+    normalizedQuestion.includes('natural language processing') ||
+    includesWholeTerm(normalizedQuestion, 'ml') ||
+    includesWholeTerm(normalizedQuestion, 'ai') ||
+    includesWholeTerm(normalizedQuestion, 'nlp') ||
+    includesWholeTerm(normalizedQuestion, 'xgboost') ||
+    includesWholeTerm(normalizedQuestion, 'neural') ||
+    normalizedQuestion.includes('neural network') ||
+    normalizedQuestion.includes('kalman filter') ||
+    includesWholeTerm(normalizedQuestion, 'lasso') ||
+    includesWholeTerm(normalizedQuestion, 'pca')
+  ) {
+    const linkedInProjectEntry = getDirectTopicEntryForLinkedInProject(normalizedQuestion);
+    return linkedInProjectEntry ?? knowledgeEntries.find((entry) => entry.id === 'machine-learning');
+  }
+
+  if (
+    (normalizedQuestion.includes('programming language') || normalizedQuestion.includes('coding language')) ||
+    (normalizedQuestion.includes('languages') &&
+      (includesWholeTerm(normalizedQuestion, 'code') ||
+        includesWholeTerm(normalizedQuestion, 'coding') ||
+        includesWholeTerm(normalizedQuestion, 'programming'))) ||
+    (includesWholeTerm(normalizedQuestion, 'python') ||
+      includesWholeTerm(normalizedQuestion, 'java') ||
+      includesWholeTerm(normalizedQuestion, 'r') ||
+      includesWholeTerm(normalizedQuestion, 'matlab') ||
+      includesWholeTerm(normalizedQuestion, 'sql') ||
+      includesWholeTerm(normalizedQuestion, 'kafka') ||
+      includesWholeTerm(normalizedQuestion, 'redis') ||
+      includesWholeTerm(normalizedQuestion, 'database') ||
+      includesWholeTerm(normalizedQuestion, 'databases') ||
+      normalizedQuestion.includes('google cloud') ||
+      includesWholeTerm(normalizedQuestion, 'aws') ||
+      normalizedQuestion.includes('bloomberg terminal') ||
+      includesWholeTerm(normalizedQuestion, 'git') ||
+      includesWholeTerm(normalizedQuestion, 'mercurial') ||
+      includesWholeTerm(normalizedQuestion, 'svn') ||
+      includesWholeTerm(normalizedQuestion, 'windows') ||
+      includesWholeTerm(normalizedQuestion, 'mac') ||
+      includesWholeTerm(normalizedQuestion, 'ubuntu'))
+  ) {
+    return knowledgeEntries.find((entry) => entry.id === 'skills');
+  }
+
+  if (
+    normalizedQuestion.includes('alpha research') ||
+    normalizedQuestion.includes('alpha models') ||
+    normalizedQuestion.includes('quant researcher') ||
+    normalizedQuestion.includes('hedge fund experience') ||
+    normalizedQuestion.includes('production ready strategies') ||
+    normalizedQuestion.includes('production-ready strategies') ||
+    normalizedQuestion.includes('performance attribution')
+  ) {
+    return knowledgeEntries.find((entry) => entry.id === 'qms');
+  }
+
+  if (
+    normalizedQuestion.includes('household impact') ||
+    normalizedQuestion.includes('covid policy') ||
+    normalizedQuestion.includes('policy documents')
+  ) {
+    return knowledgeEntries.find((entry) => entry.id === 'previous-research');
+  }
+
+  if (
+    normalizedQuestion.includes('source links') ||
+    normalizedQuestion.includes('public links') ||
+    normalizedQuestion.includes('resume pdf') ||
+    normalizedQuestion.includes('download resume') ||
+    normalizedQuestion.includes('download cv') ||
+    normalizedQuestion.includes('linkedin url') ||
+    normalizedQuestion.includes('substack url') ||
+    normalizedQuestion.includes('website link')
+  ) {
+    return knowledgeEntries.find((entry) => entry.id === 'resources');
+  }
+
+  if (
+    includesWholeTerm(normalizedQuestion, 'location') ||
+    includesWholeTerm(normalizedQuestion, 'raleigh') ||
+    normalizedQuestion.includes('north carolina') ||
+    normalizedQuestion.includes('where is he based')
+  ) {
+    return knowledgeEntries.find((entry) => entry.id === 'contact');
+  }
+
+  const linkedInProjectEntry = getDirectTopicEntryForLinkedInProject(normalizedQuestion);
+  if (linkedInProjectEntry) {
+    return linkedInProjectEntry;
+  }
+
+  if (
+    normalizedQuestion.includes('em fx') ||
+    includesWholeTerm(normalizedQuestion, 'emfx') ||
+    normalizedQuestion.includes('emerging markets fx') ||
+    normalizedQuestion.includes('emerging market currencies') ||
+    includesWholeTerm(normalizedQuestion, 'currency') ||
+    includesWholeTerm(normalizedQuestion, 'currencies') ||
+    normalizedQuestion.includes('foreign exchange') ||
+    normalizedQuestion.includes('regime modelling') ||
+    normalizedQuestion.includes('regime modeling') ||
+    normalizedQuestion.includes('signal weighting') ||
+    normalizedQuestion.includes('universe selection')
+  ) {
+    return knowledgeEntries.find((entry) => entry.id === 'qms');
+  }
+
+  if (
+    normalizedQuestion.includes('competition') ||
+    normalizedQuestion.includes('chicago booth') ||
+    normalizedQuestion.includes('cfa irc') ||
+    includesWholeTerm(normalizedQuestion, 'snapchat')
+  ) {
+    return knowledgeEntries.find((entry) => entry.id === 'competitions');
   }
 
   if (
@@ -1288,9 +1789,11 @@ export function getWelcomeReply(): ChatbotReply {
 }
 
 export function getChatbotReply(question: string): ChatbotReply {
-  const tokens = tokenize(question);
+  const normalizedQuestion = normalize(question);
+  const effectiveQuestion = stripConversationalWrappers(normalizedQuestion) || normalizedQuestion;
+  const tokens = tokenize(effectiveQuestion);
 
-  if (isGreeting(question)) {
+  if (isGreeting(question) || isHelpQuestion(question)) {
     return getWelcomeReply();
   }
 
@@ -1303,17 +1806,31 @@ export function getChatbotReply(question: string): ChatbotReply {
     return getUnsupportedPersonalReply();
   }
 
+  if (isUnverifiedCredentialQuestion(question) || isUnsupportedLanguageQuestion(question)) {
+    return getUnknownProfileReply();
+  }
+
+  if (isInterestsQuestion(question)) {
+    const interestsEntry = knowledgeEntries.find((entry) => entry.id === 'interests');
+    if (interestsEntry) return replyFromEntry(interestsEntry);
+  }
+
+  if (isLatestRoleQuestion(question)) {
+    const latestRoleEntry = knowledgeEntries.find((entry) => entry.id === 'latest-role');
+    if (latestRoleEntry) return replyFromEntry(latestRoleEntry);
+  }
+
   if (isRecommendationsQuestion(question)) {
     const recommendationsEntry = knowledgeEntries.find((entry) => entry.id === 'recommendations');
     if (recommendationsEntry) return replyFromEntry(recommendationsEntry);
   }
 
-  const directTopicEntry = getDirectTopicEntry(question);
+  const directTopicEntry = getDirectTopicEntry(effectiveQuestion);
   if (directTopicEntry) {
     return replyFromEntry(directTopicEntry);
   }
 
-  const employerEntry = getEmployerEntry(question);
+  const employerEntry = getEmployerEntry(effectiveQuestion);
   if (employerEntry) {
     return replyFromEntry(employerEntry);
   }
@@ -1325,22 +1842,13 @@ export function getChatbotReply(question: string): ChatbotReply {
   const matches = knowledgeEntries
     .map((entry) => ({
       entry,
-      score: scoreEntry(entry, question, tokens),
+      score: scoreEntry(entry, effectiveQuestion, tokens),
     }))
     .filter((match) => match.score >= 12)
     .sort((a, b) => b.score - a.score);
 
   if (!matches.length) {
-    return {
-      headline: "I do not have that in Kartik's curated profile yet.",
-      points: [
-        'I can answer reliably about his resume, website, public LinkedIn profile, Substack writing, skills, projects, education, and contact details.',
-        'For something more specific, the safest next step is to contact Kartik directly at kartikagarwal777@gmail.com.',
-      ],
-      sources: [],
-      suggestions: fallbackSuggestions,
-      isFallback: true,
-    };
+    return getUnknownProfileReply();
   }
 
   const topScore = matches[0].score;

@@ -271,7 +271,7 @@ const PortfolioChatbot = () => {
               if (message.role === 'user') {
                 return (
                   <div key={message.id} className="flex justify-end">
-                    <div className="max-w-[85%] rounded-2xl rounded-br-md bg-slate-900 px-4 py-3 text-sm font-medium leading-relaxed text-white shadow-[0_12px_26px_rgba(15,23,42,0.18)]">
+                    <div className="max-w-[85%] break-words rounded-2xl rounded-br-md bg-slate-900 px-4 py-3 text-sm font-medium leading-relaxed text-white shadow-[0_12px_26px_rgba(15,23,42,0.18)]">
                       {message.content}
                     </div>
                   </div>
@@ -285,7 +285,7 @@ const PortfolioChatbot = () => {
 
               return (
                 <div key={message.id} className="flex justify-start">
-                  <div className="max-w-[92%] rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-slate-700 shadow-[0_12px_24px_rgba(15,23,42,0.08)]">
+                  <div className="max-w-[92%] break-words rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-slate-700 shadow-[0_12px_24px_rgba(15,23,42,0.08)]">
                     <p className="font-semibold leading-snug text-slate-900">{message.reply.headline}</p>
                     {message.reply.points.length > 0 && (
                       <ul className="mt-3 space-y-2">
