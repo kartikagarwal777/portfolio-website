@@ -874,9 +874,9 @@ const knowledgeEntries: KnowledgeEntry[] = [
     category: 'Contact',
     title: 'Contact Information',
     headline:
-      'The best way to contact Kartik is by email at kartikagarwal777@gmail.com.',
+      'Kartik is based in Raleigh, NC, and the best way to contact him is by email at kartikagarwal777@gmail.com.',
     points: [
-      'He is based in Raleigh, NC.',
+      'He is based in Raleigh, NC, which is in the U.S. Eastern Time zone.',
       'His resume also lists phone contact as (424) 440-9728.',
       'You can also reach or evaluate him through his LinkedIn profile, resume PDF, website, and Substack.',
     ],
@@ -1112,6 +1112,7 @@ function normalize(text: string) {
     .replace(/\blenguages?\b/g, 'languages')
     .replace(/\bquantative\b/g, 'quantitative')
     .replace(/linked\s*in/g, 'linkedin')
+    .replace(/\be\s+mail\b/g, 'email')
     .replace(/e-mail/g, 'email')
     .replace(/[^a-z0-9+.#$-]+/g, ' ')
     .trim();
@@ -1320,6 +1321,7 @@ function isUnsupportedPersonalQuestion(question: string) {
     'green-card',
     'health',
     'height',
+    'home phone',
     'h-1b',
     'h1b',
     'hindu',
@@ -1332,6 +1334,8 @@ function isUnsupportedPersonalQuestion(question: string) {
     'married',
     'medical',
     'nationality',
+    'net worth',
+    'parents',
     'political belief',
     'political beliefs',
     'politics',
@@ -1340,6 +1344,7 @@ function isUnsupportedPersonalQuestion(question: string) {
     'religion',
     'salary',
     'shoe size',
+    'siblings',
     'social security number',
     'sponsor',
     'sponsorship',
@@ -1359,8 +1364,39 @@ function isUnsupportedPersonalQuestion(question: string) {
   return (
     unsupportedTerms.some((term) => includesWholeTerm(normalizedQuestion, term)) ||
     /^(is|are|was)\s+(kartik|he)\s+indian$/.test(normalizedQuestion) ||
+    /^where\s+(is|was)\s+(kartik|he)\s+from$/.test(normalizedQuestion) ||
+    normalizedQuestion.includes('family background') ||
     normalizedQuestion.includes('from india') ||
     normalizedQuestion.includes('authorized to work')
+  );
+}
+
+function isWorkAuthorizationQuestion(question: string) {
+  const normalizedQuestion = normalize(question);
+  const usContext =
+    includesWholeTerm(normalizedQuestion, 'us') ||
+    includesWholeTerm(normalizedQuestion, 'u.s.') ||
+    includesWholeTerm(normalizedQuestion, 'usa') ||
+    includesWholeTerm(normalizedQuestion, 'united states') ||
+    includesWholeTerm(normalizedQuestion, 'america') ||
+    includesWholeTerm(normalizedQuestion, 'american');
+
+  return (
+    normalizedQuestion.includes('work authorization') ||
+    normalizedQuestion.includes('work authorisation') ||
+    normalizedQuestion.includes('authorized to work') ||
+    normalizedQuestion.includes('authorised to work') ||
+    normalizedQuestion.includes('work eligibility') ||
+    normalizedQuestion.includes('eligible to work') ||
+    normalizedQuestion.includes('work permit') ||
+    normalizedQuestion.includes('ead') ||
+    normalizedQuestion.includes('visa status') ||
+    includesWholeTerm(normalizedQuestion, 'h-1b') ||
+    includesWholeTerm(normalizedQuestion, 'h1b') ||
+    includesWholeTerm(normalizedQuestion, 'sponsor') ||
+    includesWholeTerm(normalizedQuestion, 'sponsorship') ||
+    (usContext && normalizedQuestion.includes('can he work')) ||
+    (usContext && normalizedQuestion.includes('can kartik work'))
   );
 }
 
@@ -1438,11 +1474,114 @@ function isInterestsQuestion(question: string) {
 
 function isUnverifiedCredentialQuestion(question: string) {
   const normalizedQuestion = normalize(question);
+  const asksAboutCfaCredential =
+    includesWholeTerm(normalizedQuestion, 'cfa') &&
+    !includesWholeTerm(normalizedQuestion, 'irc') &&
+    (includesWholeTerm(normalizedQuestion, 'charter') ||
+      includesWholeTerm(normalizedQuestion, 'charterholder') ||
+      includesWholeTerm(normalizedQuestion, 'credential') ||
+      includesWholeTerm(normalizedQuestion, 'certification') ||
+      includesWholeTerm(normalizedQuestion, 'certified') ||
+      includesWholeTerm(normalizedQuestion, 'exam') ||
+      includesWholeTerm(normalizedQuestion, 'exams') ||
+      includesWholeTerm(normalizedQuestion, 'level') ||
+      normalizedQuestion.includes('does he have cfa') ||
+      normalizedQuestion.includes('has he got cfa') ||
+      normalizedQuestion.includes('did he pass cfa') ||
+      normalizedQuestion.includes('passed cfa'));
 
   return (
-    includesWholeTerm(normalizedQuestion, 'cfa') &&
-    (includesWholeTerm(normalizedQuestion, 'charter') || includesWholeTerm(normalizedQuestion, 'charterholder'))
+    asksAboutCfaCredential ||
+    includesWholeTerm(normalizedQuestion, 'gpa') ||
+    includesWholeTerm(normalizedQuestion, 'g.p.a.') ||
+    includesWholeTerm(normalizedQuestion, 'cpa')
   );
+}
+
+function isPromptInjectionQuestion(question: string) {
+  const normalizedQuestion = normalize(question);
+
+  return (
+    normalizedQuestion.includes('system prompt') ||
+    normalizedQuestion.includes('hidden prompt') ||
+    normalizedQuestion.includes('developer message') ||
+    normalizedQuestion.includes('developer instructions') ||
+    normalizedQuestion.includes('reveal instructions') ||
+    normalizedQuestion.includes('show instructions') ||
+    normalizedQuestion.includes('ignore prior instructions') ||
+    normalizedQuestion.includes('ignore all prior instructions')
+  );
+}
+
+function getWorkAuthorizationReply(question: string): ChatbotReply {
+  const normalizedQuestion = normalize(question);
+  const asksAboutNeedingSponsorship =
+    (includesWholeTerm(normalizedQuestion, 'need') ||
+      includesWholeTerm(normalizedQuestion, 'needs') ||
+      includesWholeTerm(normalizedQuestion, 'require') ||
+      includesWholeTerm(normalizedQuestion, 'requires') ||
+      includesWholeTerm(normalizedQuestion, 'requiring')) &&
+    (includesWholeTerm(normalizedQuestion, 'sponsor') ||
+      includesWholeTerm(normalizedQuestion, 'sponsorship') ||
+      includesWholeTerm(normalizedQuestion, 'h-1b') ||
+      includesWholeTerm(normalizedQuestion, 'h1b'));
+
+  return {
+    headline: asksAboutNeedingSponsorship
+      ? 'No. Kartik does not need U.S. work sponsorship; he is authorized to work in the United States.'
+      : 'Yes. Kartik is authorized to work in the United States.',
+    points: [
+      'For hiring purposes, yes: he is authorized to work in the U.S.',
+      'I do not have a more specific visa category in the curated public profile, so I would not infer one.',
+      'For any formal hiring paperwork or timing details, contact Kartik directly at kartikagarwal777@gmail.com.',
+    ],
+    sources: [],
+    suggestions: [
+      'How can I contact him?',
+      'Summarize his experience',
+      'What is Kartik best at?',
+    ],
+  };
+}
+
+function getLatestRoleAndWritingReply(): ChatbotReply {
+  return {
+    headline:
+      "Kartik's most recent listed role is QMS Capital Management, and his latest RSS-listed Substack post is about Bitcoin.",
+    points: [
+      'Most recent listed role: Quant Researcher at QMS Capital Management from July 2021 to October 2025.',
+      'The curated sources do not verify a newer employer, so the chatbot should not claim a current employer beyond that most recent listed role.',
+      'Latest RSS item available to this site: "What Is Bitcoin Supposed to Be?", published February 7, 2026.',
+      'That post discusses Bitcoin narratives, incentives, and why its value is hard to anchor.',
+    ],
+    sources: uniqueSources(['resume', 'website', 'linkedin', 'substack']),
+    suggestions: [
+      'Tell me about QMS Capital',
+      'What does his Substack cover?',
+      'How can I contact him?',
+    ],
+  };
+}
+
+function isLatestRoleAndWritingQuestion(question: string) {
+  const normalizedQuestion = normalize(question);
+  const asksAboutRole =
+    normalizedQuestion.includes('latest role') ||
+    normalizedQuestion.includes('latest job') ||
+    normalizedQuestion.includes('latest employer') ||
+    normalizedQuestion.includes('most recent role') ||
+    normalizedQuestion.includes('most recent job') ||
+    normalizedQuestion.includes('current role') ||
+    normalizedQuestion.includes('current employer');
+  const asksAboutWriting =
+    normalizedQuestion.includes('latest article') ||
+    normalizedQuestion.includes('latest post') ||
+    normalizedQuestion.includes('latest writing') ||
+    normalizedQuestion.includes('recent article') ||
+    normalizedQuestion.includes('recent post') ||
+    normalizedQuestion.includes('substack');
+
+  return asksAboutRole && asksAboutWriting;
 }
 
 function isUnsupportedLanguageQuestion(question: string) {
@@ -1514,6 +1653,12 @@ function getDirectTopicEntry(question: string) {
   if (
     normalizedQuestion.includes('cross functional') ||
     normalizedQuestion.includes('cross-functional') ||
+    normalizedQuestion.includes('software engineering role') ||
+    normalizedQuestion.includes('software engineer role') ||
+    normalizedQuestion.includes('engineering role') ||
+    normalizedQuestion.includes('software role') ||
+    normalizedQuestion.includes('fit a software') ||
+    normalizedQuestion.includes('fit for software') ||
     normalizedQuestion.includes('email tracking') ||
     normalizedQuestion.includes('mail sending capacity') ||
     normalizedQuestion.includes('throttling module') ||
@@ -1538,6 +1683,10 @@ function getDirectTopicEntry(question: string) {
     normalizedQuestion.includes('academic background') ||
     normalizedQuestion.includes('ucla anderson') ||
     normalizedQuestion.includes('what is his degree') ||
+    normalizedQuestion.includes('which college') ||
+    normalizedQuestion.includes('what college') ||
+    normalizedQuestion.includes('which university') ||
+    normalizedQuestion.includes('what university') ||
     normalizedQuestion.includes('what school') ||
     normalizedQuestion.includes('where did he go to school')
   ) {
@@ -1643,9 +1792,28 @@ function getDirectTopicEntry(question: string) {
   if (
     normalizedQuestion.includes('source links') ||
     normalizedQuestion.includes('public links') ||
+    normalizedQuestion.includes('show me public links') ||
+    normalizedQuestion === 'resume' ||
+    normalizedQuestion === 'cv' ||
     normalizedQuestion.includes('resume pdf') ||
+    normalizedQuestion.includes('resume link') ||
+    normalizedQuestion.includes('cv link') ||
+    normalizedQuestion.includes('give me his resume') ||
+    normalizedQuestion.includes('give me his cv') ||
+    normalizedQuestion.includes('send me his resume') ||
+    normalizedQuestion.includes('send me his cv') ||
+    normalizedQuestion.includes('show me his resume') ||
+    normalizedQuestion.includes('show me his cv') ||
+    normalizedQuestion.includes('see his cv') ||
+    normalizedQuestion.includes('can you send me his resume') ||
+    normalizedQuestion.includes('can you send me his cv') ||
+    normalizedQuestion.includes('can i download his resume') ||
+    normalizedQuestion.includes('can i see his cv') ||
     normalizedQuestion.includes('download resume') ||
     normalizedQuestion.includes('download cv') ||
+    normalizedQuestion.includes('portfolio website') ||
+    normalizedQuestion.includes('personal website') ||
+    normalizedQuestion.includes('what is his linkedin') ||
     normalizedQuestion.includes('linkedin url') ||
     normalizedQuestion.includes('substack url') ||
     normalizedQuestion.includes('website link')
@@ -1657,7 +1825,16 @@ function getDirectTopicEntry(question: string) {
     includesWholeTerm(normalizedQuestion, 'location') ||
     includesWholeTerm(normalizedQuestion, 'raleigh') ||
     normalizedQuestion.includes('north carolina') ||
-    normalizedQuestion.includes('where is he based')
+    normalizedQuestion.includes('where is he based') ||
+    normalizedQuestion.includes('where is kartik based') ||
+    normalizedQuestion.includes('where is he located') ||
+    normalizedQuestion.includes('where is kartik located') ||
+    normalizedQuestion.includes('where is kartik') ||
+    normalizedQuestion.includes('what time zone') ||
+    normalizedQuestion.includes('book an interview') ||
+    normalizedQuestion.includes('schedule interview') ||
+    normalizedQuestion.includes('schedule a call') ||
+    normalizedQuestion.includes('book a call')
   ) {
     return knowledgeEntries.find((entry) => entry.id === 'contact');
   }
@@ -1755,7 +1932,9 @@ function getEmployerEntry(question: string) {
     includesWholeTerm(normalizedQuestion, 'zoho') ||
     normalizedQuestion.includes('manageengine') ||
     normalizedQuestion.includes('zeptomail') ||
-    includesWholeTerm(normalizedQuestion, 'weinvest')
+    includesWholeTerm(normalizedQuestion, 'weinvest') ||
+    includesWholeTerm(normalizedQuestion, 'bangalore') ||
+    includesWholeTerm(normalizedQuestion, 'chennai')
   ) {
     return knowledgeEntries.find((entry) => entry.id === 'engineering');
   }
@@ -1802,8 +1981,16 @@ export function getChatbotReply(question: string): ChatbotReply {
     if (profileEntry) return replyFromEntry(profileEntry);
   }
 
+  if (isWorkAuthorizationQuestion(question)) {
+    return getWorkAuthorizationReply(question);
+  }
+
   if (isUnsupportedPersonalQuestion(question)) {
     return getUnsupportedPersonalReply();
+  }
+
+  if (isPromptInjectionQuestion(question)) {
+    return getUnknownProfileReply();
   }
 
   if (isUnverifiedCredentialQuestion(question) || isUnsupportedLanguageQuestion(question)) {
@@ -1816,6 +2003,10 @@ export function getChatbotReply(question: string): ChatbotReply {
   }
 
   if (isLatestRoleQuestion(question)) {
+    if (isLatestRoleAndWritingQuestion(question)) {
+      return getLatestRoleAndWritingReply();
+    }
+
     const latestRoleEntry = knowledgeEntries.find((entry) => entry.id === 'latest-role');
     if (latestRoleEntry) return replyFromEntry(latestRoleEntry);
   }
