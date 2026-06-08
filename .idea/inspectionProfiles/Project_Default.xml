@@ -1,0 +1,46 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="3.14" />
+            <item index="1" class="java.lang.String" itemvalue="3.7" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="xgboost" />
+          <option value="autobahn" />
+          <option value="ecos" />
+          <option value="hyperlink" />
+          <option value="kiteconnect" />
+          <option value="mpld3" />
+          <option value="multitasking" />
+          <option value="peewee" />
+          <option value="ptyprocess" />
+          <option value="pure-eval" />
+          <option value="pytz" />
+          <option value="requests-futures" />
+          <option value="stack-data" />
+          <option value="twisted" />
+          <option value="yfinance" />
+          <option value="zope.interface" />
+          <option value="pandas" />
+          <option value="numpy" />
+          <option value="scipy" />
+          <option value="statsmodels" />
+          <option value="arch" />
+          <option value="matplotlib" />
+          <option value="pyyaml" />
+          <option value="tqdm" />
+          <option value="joblib" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

@@ -10,6 +10,7 @@ type Position = {
 
 type ExperienceEntry = {
   company: string;
+  website: string;
   location: string;
   positions: Position[];
   achievements: Achievement[];
@@ -19,6 +20,7 @@ const Experience = () => {
   const experiences: ExperienceEntry[] = [
     {
       company: 'QMS Capital Management',
+      website: 'https://www.qmscapital.com/',
       location: 'Durham, NC',
       positions: [
         {
@@ -50,6 +52,7 @@ const Experience = () => {
     },
     {
       company: 'UCLA (Federal Reserve Bank of Philadelphia)',
+      website: 'https://www.ucla.edu/',
       location: 'Los Angeles, CA',
       positions: [
         {
@@ -68,6 +71,7 @@ const Experience = () => {
     },
     {
       company: 'GIC (Singapore Sovereign Wealth Fund)',
+      website: 'https://www.gic.com.sg/',
       location: 'San Francisco, CA',
       positions: [
         {
@@ -83,6 +87,7 @@ const Experience = () => {
     },
     {
       company: 'WeInvest',
+      website: 'https://www.weinvest.net/',
       location: 'Bangalore, India',
       positions: [
         {
@@ -98,6 +103,7 @@ const Experience = () => {
     },
     {
       company: 'Zoho ManageEngine',
+      website: 'https://www.zoho.com/zeptomail/',
       location: 'Chennai, India',
       positions: [
         {
@@ -136,7 +142,23 @@ const Experience = () => {
               <article className="surface-panel-strong hover-lift p-5 sm:p-6 md:p-7">
                 <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                   <div>
-                    <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">{exp.company}</h3>
+                    <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+                      <a
+                        href={exp.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Open ${exp.company} website`}
+                        className="group inline-flex max-w-full items-center gap-2 underline-offset-4 hover:text-cyan-800 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-600 focus-visible:ring-offset-4 focus-visible:ring-offset-white"
+                      >
+                        <span>{exp.company}</span>
+                        <span
+                          className="grid h-6 w-6 shrink-0 place-items-center rounded-full border border-slate-200 bg-slate-50 text-xs font-semibold text-slate-500 transition-colors group-hover:border-cyan-200 group-hover:bg-cyan-50 group-hover:text-cyan-700"
+                          aria-hidden
+                        >
+                          ↗
+                        </span>
+                      </a>
+                    </h3>
                     <div className="mt-2 flex flex-wrap gap-2">
                       {exp.positions.map((position) => (
                         <span
