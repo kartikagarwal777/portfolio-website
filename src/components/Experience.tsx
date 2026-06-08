@@ -52,7 +52,7 @@ const Experience = () => {
     },
     {
       company: 'UCLA (Federal Reserve Bank of Philadelphia)',
-      website: 'https://www.ucla.edu/',
+      website: 'https://www.philadelphiafed.org',
       location: 'Los Angeles, CA',
       positions: [
         {
