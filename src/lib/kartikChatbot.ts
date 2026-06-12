@@ -1400,6 +1400,48 @@ function isWorkAuthorizationQuestion(question: string) {
   );
 }
 
+function isBatmanQuestion(question: string) {
+  const normalizedQuestion = normalize(question);
+  const batmanTerms = [
+    'bisexual',
+    'boyfriend',
+    'crush',
+    'dating',
+    'gay',
+    'girlfriend',
+    'hookup',
+    'husband',
+    'lesbian',
+    'lgbt',
+    'lgbtq',
+    'marital status',
+    'married',
+    'queer',
+    'relationship',
+    'romantic',
+    'sex',
+    'sex life',
+    'sexual',
+    'sexual orientation',
+    'sexuality',
+    'single',
+    'straight',
+    'transgender',
+    'wife',
+  ];
+
+  return (
+    batmanTerms.some((term) => includesWholeTerm(normalizedQuestion, term)) ||
+    normalizedQuestion.includes('attracted to') ||
+    normalizedQuestion.includes('hook up') ||
+    normalizedQuestion.includes('in bed') ||
+    normalizedQuestion.includes('into men') ||
+    normalizedQuestion.includes('into women') ||
+    normalizedQuestion.includes('sleep with') ||
+    normalizedQuestion.includes('slept with')
+  );
+}
+
 function isRecommendationsQuestion(question: string) {
   const normalizedQuestion = normalize(question);
   const recommendationTerms = [
@@ -1540,6 +1582,92 @@ function getWorkAuthorizationReply(question: string): ChatbotReply {
       'How can I contact him?',
       'Summarize his experience',
       'What is Kartik best at?',
+    ],
+  };
+}
+
+function getBatmanReply(question: string): ChatbotReply {
+  const normalizedQuestion = normalize(question);
+  const asksAboutOrientation =
+    includesWholeTerm(normalizedQuestion, 'bisexual') ||
+    includesWholeTerm(normalizedQuestion, 'gay') ||
+    includesWholeTerm(normalizedQuestion, 'lesbian') ||
+    includesWholeTerm(normalizedQuestion, 'lgbt') ||
+    includesWholeTerm(normalizedQuestion, 'lgbtq') ||
+    includesWholeTerm(normalizedQuestion, 'queer') ||
+    includesWholeTerm(normalizedQuestion, 'straight') ||
+    includesWholeTerm(normalizedQuestion, 'transgender') ||
+    includesWholeTerm(normalizedQuestion, 'sexual orientation') ||
+    includesWholeTerm(normalizedQuestion, 'sexuality') ||
+    normalizedQuestion.includes('attracted to') ||
+    normalizedQuestion.includes('into men') ||
+    normalizedQuestion.includes('into women');
+  const asksAboutRelationship =
+    includesWholeTerm(normalizedQuestion, 'boyfriend') ||
+    includesWholeTerm(normalizedQuestion, 'crush') ||
+    includesWholeTerm(normalizedQuestion, 'dating') ||
+    includesWholeTerm(normalizedQuestion, 'girlfriend') ||
+    includesWholeTerm(normalizedQuestion, 'husband') ||
+    includesWholeTerm(normalizedQuestion, 'marital status') ||
+    includesWholeTerm(normalizedQuestion, 'married') ||
+    includesWholeTerm(normalizedQuestion, 'relationship') ||
+    includesWholeTerm(normalizedQuestion, 'romantic') ||
+    includesWholeTerm(normalizedQuestion, 'single') ||
+    includesWholeTerm(normalizedQuestion, 'wife');
+  const asksExplicitSexual =
+    includesWholeTerm(normalizedQuestion, 'hookup') ||
+    includesWholeTerm(normalizedQuestion, 'sex') ||
+    includesWholeTerm(normalizedQuestion, 'sex life') ||
+    includesWholeTerm(normalizedQuestion, 'sexual') ||
+    normalizedQuestion.includes('hook up') ||
+    normalizedQuestion.includes('in bed') ||
+    normalizedQuestion.includes('sleep with') ||
+    normalizedQuestion.includes('slept with');
+  const hash = normalizedQuestion
+    .split('')
+    .reduce((currentHash, character) => currentHash + character.charCodeAt(0), 0);
+  const headlineOptions = asksAboutOrientation
+    ? [
+        'Nah, he is Batman.',
+        'Orientation? Toward Gotham. He is Batman.',
+        'Not the file I keep. He is Batman.',
+      ]
+    : asksAboutRelationship
+      ? [
+          'Relationship status: Batman.',
+          'Dating status? Batman.',
+          'He is committed to being Batman.',
+        ]
+      : asksExplicitSexual
+        ? [
+            'That case file is sealed. He is Batman.',
+            'Bedroom intel? Classified. He is Batman.',
+            'Nope, that one stays in the Batcave. He is Batman.',
+          ]
+        : [
+            'He is Batman.',
+            'Confirmed: Batman.',
+            'Batman. Final answer.',
+          ];
+  const contextPoint = asksAboutOrientation
+    ? 'That is the playful nickname answer for orientation questions, not a personal-life disclosure.'
+    : asksAboutRelationship
+      ? 'That is the playful nickname answer for dating or relationship questions.'
+      : asksExplicitSexual
+        ? 'That is the playful nickname answer for explicit personal questions.'
+        : 'That is the official nickname answer for personal or sexual questions.';
+
+  return {
+    headline: headlineOptions[hash % headlineOptions.length],
+    points: [
+      contextPoint,
+      'For professional context, I can still help with his quant experience, engineering background, projects, skills, writing, education, or contact details.',
+    ],
+    sources: [],
+    suggestions: [
+      'What is Kartik best at?',
+      'Summarize his experience',
+      'What are his technical skills?',
     ],
   };
 }
@@ -1983,6 +2111,10 @@ export function getChatbotReply(question: string): ChatbotReply {
 
   if (isWorkAuthorizationQuestion(question)) {
     return getWorkAuthorizationReply(question);
+  }
+
+  if (isBatmanQuestion(question)) {
+    return getBatmanReply(question);
   }
 
   if (isUnsupportedPersonalQuestion(question)) {
