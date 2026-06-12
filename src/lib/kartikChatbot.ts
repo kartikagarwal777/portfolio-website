@@ -1646,21 +1646,13 @@ function getBatmanReply(question: string): ChatbotReply {
           ]
         : [
             'He is Batman.',
-            'Confirmed: Batman.',
-            'Batman. Final answer.',
-          ];
-  const contextPoint = asksAboutOrientation
-    ? 'That is the playful nickname answer for orientation questions, not a personal-life disclosure.'
-    : asksAboutRelationship
-      ? 'That is the playful nickname answer for dating or relationship questions.'
-      : asksExplicitSexual
-        ? 'That is the playful nickname answer for explicit personal questions.'
-        : 'That is the official nickname answer for personal or sexual questions.';
+          'Confirmed: Batman.',
+          'Batman. Final answer.',
+        ];
 
   return {
     headline: headlineOptions[hash % headlineOptions.length],
     points: [
-      contextPoint,
       'For professional context, I can still help with his quant experience, engineering background, projects, skills, writing, education, or contact details.',
     ],
     sources: [],
