@@ -43,6 +43,7 @@ const Header = () => {
     >
       <div className="section-shell">
         <nav
+          aria-label="Primary navigation"
           className={`rounded-2xl border backdrop-blur-md transition-all duration-500 ${
             isScrolled
               ? 'border-slate-200/80 bg-white/88 shadow-[0_18px_36px_rgba(15,23,42,0.12)]'
@@ -50,7 +51,7 @@ const Header = () => {
           }`}
         >
           <div className="flex h-14 items-center justify-between px-3 sm:px-4">
-            <Link href="/" className="inline-flex items-center gap-3">
+            <Link href="/" aria-label="Kartik Agarwal home" className="inline-flex items-center gap-3">
               <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-cyan-600 via-sky-700 to-cyan-800 text-xs font-bold text-white shadow-lg shadow-cyan-950/30">
                 KA
               </span>

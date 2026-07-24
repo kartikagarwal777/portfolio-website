@@ -72,7 +72,7 @@ const About = () => {
                 <a
                   href="https://www.linkedin.com/in/kartik-agarwal/"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
                   className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:border-slate-400"
                 >
                   LinkedIn
@@ -80,7 +80,7 @@ const About = () => {
                 <a
                   href="https://kartikag.substack.com"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
                   className="rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-sm font-semibold text-cyan-800 hover:bg-cyan-100"
                 >
                   Substack

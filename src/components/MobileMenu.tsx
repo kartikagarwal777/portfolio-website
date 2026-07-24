@@ -159,7 +159,7 @@ const MobileMenu = ({ isScrolled }: MobileMenuProps) => {
                     key={item.href}
                     href={item.href}
                     target={item.newTab ? '_blank' : undefined}
-                    rel={item.newTab ? 'noopener noreferrer' : undefined}
+                    rel={item.newTab ? 'me noopener noreferrer' : undefined}
                     className="flex items-center justify-between rounded-xl px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900"
                     onClick={(e) => handleLinkClick(e, item.href, item.isExternal)}
                   >
@@ -179,7 +179,7 @@ const MobileMenu = ({ isScrolled }: MobileMenuProps) => {
               <a
                 href="https://kartikag.substack.com"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener noreferrer"
                 className="mt-3 inline-flex w-full items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50"
                 onClick={closeMenu}
               >

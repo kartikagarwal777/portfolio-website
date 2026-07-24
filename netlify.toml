@@ -9,6 +9,12 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+[[redirects]]
+  from = "https://kartikagarwal.netlify.app/*"
+  to = "https://kartik-agarwal.com/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]

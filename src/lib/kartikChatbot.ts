@@ -218,6 +218,7 @@ const knowledgeEntries: KnowledgeEntry[] = [
       'commodities',
       'commodity',
       'equity',
+      'equities',
       'fixed income',
       'futures',
       'em fx',
@@ -1285,6 +1286,9 @@ function isProfileQuestion(question: string) {
     strippedQuestion.includes('what is his background') ||
     strippedQuestion.includes('what is kartik background') ||
     strippedQuestion.includes('professional background') ||
+    strippedQuestion.includes('tell me everything') ||
+    strippedQuestion.includes('what has he achieved') ||
+    strippedQuestion.includes('what has kartik achieved') ||
     strippedQuestion.includes('good fit') ||
     strippedQuestion.includes('quick pitch') ||
     strippedQuestion.includes('his story') ||
@@ -1389,7 +1393,7 @@ function isWorkAuthorizationQuestion(question: string) {
     normalizedQuestion.includes('work eligibility') ||
     normalizedQuestion.includes('eligible to work') ||
     normalizedQuestion.includes('work permit') ||
-    normalizedQuestion.includes('ead') ||
+    includesWholeTerm(normalizedQuestion, 'ead') ||
     normalizedQuestion.includes('visa status') ||
     includesWholeTerm(normalizedQuestion, 'h-1b') ||
     includesWholeTerm(normalizedQuestion, 'h1b') ||
@@ -1486,6 +1490,7 @@ function isLatestRoleQuestion(question: string) {
     normalizedQuestion.includes('job now') ||
     normalizedQuestion.includes('after qms') ||
     normalizedQuestion.includes('still at qms') ||
+    normalizedQuestion.includes('is qms current') ||
     normalizedQuestion.includes('leave qms') ||
     normalizedQuestion.includes('left qms') ||
     /where\s+(does\s+)?(kartik|he)\s+work/.test(normalizedQuestion) ||
@@ -1910,6 +1915,16 @@ function getDirectTopicEntry(question: string) {
   }
 
   if (
+    normalizedQuestion.includes('linkedin follower') ||
+    normalizedQuestion.includes('follower count') ||
+    normalizedQuestion.includes('how many connections') ||
+    normalizedQuestion.includes('linkedin connection') ||
+    includesWholeTerm(normalizedQuestion, 'connections')
+  ) {
+    return knowledgeEntries.find((entry) => entry.id === 'linkedin');
+  }
+
+  if (
     normalizedQuestion.includes('source links') ||
     normalizedQuestion.includes('public links') ||
     normalizedQuestion.includes('show me public links') ||
@@ -1934,6 +1949,7 @@ function getDirectTopicEntry(question: string) {
     normalizedQuestion.includes('portfolio website') ||
     normalizedQuestion.includes('personal website') ||
     normalizedQuestion.includes('what is his linkedin') ||
+    includesWholeTerm(normalizedQuestion, 'pdf') ||
     normalizedQuestion.includes('linkedin url') ||
     normalizedQuestion.includes('substack url') ||
     normalizedQuestion.includes('website link')

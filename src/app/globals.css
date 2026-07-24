@@ -65,6 +65,24 @@ a {
   transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 220ms ease;
 }
 
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  border-radius: 0.75rem;
+  background: #0f172a;
+  padding: 0.75rem 1rem;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.24);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 ::selection {
   background: rgba(14, 116, 144, 0.2);
   color: #082730;
