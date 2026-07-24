@@ -6,6 +6,7 @@ import Projects from '@/components/Projects'
 import ScrollToTop from '@/components/ScrollToTop'
 import PortfolioChatbot from '@/components/PortfolioChatbot'
 import Footer from '@/components/Footer'
+import WebMCPTools from '@/components/WebMCPTools'
 
 export default function Home() {
   const heroStats = [
@@ -29,6 +30,7 @@ export default function Home() {
       <Header />
       <ScrollToTop />
       <PortfolioChatbot />
+      <WebMCPTools />
       <main id="main-content" className="relative min-h-screen text-slate-900">
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[50rem] overflow-hidden">
           <div className="hero-orb hero-orb-one left-[-5rem] top-28" />

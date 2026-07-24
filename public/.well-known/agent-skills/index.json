@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "kartik-agarwal-portfolio",
+      "type": "skill-md",
+      "description": "Answer questions about Kartik Agarwal's public professional profile, quant research, engineering background, skills, education, projects, writing, and contact details. Use when evaluating Kartik's background or summarizing his experience from authoritative portfolio sources.",
+      "url": "/.well-known/agent-skills/kartik-agarwal-portfolio/SKILL.md",
+      "digest": "sha256:7657518c004c3198c81e329f77283381ac36f10d970c776bf476908c98e70bd7"
+    }
+  ]
+}

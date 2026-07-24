@@ -22,3 +22,21 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Signal = "ai-train=no, search=yes, ai-input=yes"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Link = "</.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\", </portfolio.md>; rel=\"alternate\"; type=\"text/markdown\"; title=\"Kartik Agarwal portfolio in Markdown\", </.well-known/agent-skills/index.json>; rel=\"related\"; type=\"application/json\"; title=\"Agent Skills index\", </Kartik_Agarwal.pdf>; rel=\"alternate\"; type=\"application/pdf\"; title=\"Kartik Agarwal resume\""
+    Vary = "Accept, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding"
+
+[[headers]]
+  for = "/.well-known/agent-skills/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/.well-known/agent-skills/*.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
