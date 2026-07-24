@@ -18,7 +18,7 @@ function acceptsMarkdown(acceptHeader: string | null) {
   });
 }
 
-export function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
   const isReadRequest = request.method === "GET" || request.method === "HEAD";
 
   if (isReadRequest && acceptsMarkdown(request.headers.get("accept"))) {

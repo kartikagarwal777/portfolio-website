@@ -5,7 +5,7 @@ const eslintConfig = [
   ...nextVitals,
   ...nextTypescript,
   {
-    ignores: ["eslint.config.mjs", "scripts/**"],
+    ignores: [".open-next/**", "eslint.config.mjs", "scripts/**"],
   },
   {
     rules: {

@@ -9,11 +9,17 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:cloudflare": "opennextjs-cloudflare build",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "start": "next start",
     "lint": "eslint .",
     "update": "npm update"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.20.2",
     "next": "^16.1.6",
     "pdf-parse": "^2.4.5",
     "pdfjs-dist": "^5.5.207",
@@ -30,6 +36,7 @@
     "eslint-config-next": "^16.1.6",
     "mammoth": "^1.11.0",
     "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "^4.114.0"
   }
 }
