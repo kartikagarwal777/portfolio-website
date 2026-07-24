@@ -1,6 +1,5 @@
 import Header from '@/components/Header'
 import About from '@/components/About'
-import ProfileHighlights from '@/components/ProfileHighlights'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
 import Projects from '@/components/Projects'
@@ -121,7 +120,6 @@ export default function Home() {
           </section>
 
           <About />
-          <ProfileHighlights />
           <Experience />
           <Education />
           <Projects />
