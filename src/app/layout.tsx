@@ -147,7 +147,7 @@ const structuredData = {
       name: siteTitle,
       description: siteDescription,
       inLanguage: "en-US",
-      dateModified: "2026-07-24",
+      dateModified: "2026-07-24T00:00:00-04:00",
       isPartOf: {
         "@id": `${siteUrl}/#website`,
       },
