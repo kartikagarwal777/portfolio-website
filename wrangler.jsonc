@@ -13,15 +13,5 @@
   },
   "observability": {
     "enabled": true
-  },
-  "routes": [
-    {
-      "pattern": "kartik-agarwal.com",
-      "custom_domain": true
-    },
-    {
-      "pattern": "www.kartik-agarwal.com",
-      "custom_domain": true
-    }
-  ]
+  }
 }
