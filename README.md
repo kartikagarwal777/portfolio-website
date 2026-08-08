@@ -28,6 +28,7 @@ The main page lives at `src/app/page.tsx`, shared styles live in `src/app/global
 
 ## Deployment
 
-Netlify builds the site with Node 22.13.0 using the configuration in `netlify.toml`.
+Cloudflare Workers builds and serves the production site using the OpenNext and
+Wrangler configuration in `open-next.config.ts` and `wrangler.jsonc`.
 
 The `deploy.sh` script is a local sanity check that installs from the lockfile and runs the production build. It does not commit, change remotes, or push code.

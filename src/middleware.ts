@@ -5,6 +5,16 @@ import {
   markdownResponse,
 } from "@/lib/agentDiscovery";
 
+const canonicalHost = "kartik-agarwal.com";
+const wwwHost = `www.${canonicalHost}`;
+const nonIndexablePaths = new Set([
+  "/.well-known/api-catalog",
+  "/docs/api",
+  "/openapi.json",
+  "/portfolio.md",
+  "/Kartik_Agarwal.pdf",
+]);
+
 function acceptsMarkdown(acceptHeader: string | null) {
   if (!acceptHeader) {
     return false;
@@ -19,20 +29,52 @@ function acceptsMarkdown(acceptHeader: string | null) {
 }
 
 export function middleware(request: NextRequest) {
+  const host = request.headers.get("host")?.split(":", 1)[0].toLowerCase();
+  const forwardedProtocol = request.headers
+    .get("x-forwarded-proto")
+    ?.split(",", 1)[0]
+    .trim()
+    .toLowerCase();
+  const isProductionHost = host === canonicalHost || host === wwwHost;
+
+  if (isProductionHost && (host === wwwHost || forwardedProtocol === "http")) {
+    const canonicalUrl = request.nextUrl.clone();
+    canonicalUrl.protocol = "https:";
+    canonicalUrl.hostname = canonicalHost;
+    canonicalUrl.port = "";
+
+    return NextResponse.redirect(canonicalUrl, 308);
+  }
+
   const isReadRequest = request.method === "GET" || request.method === "HEAD";
 
-  if (isReadRequest && acceptsMarkdown(request.headers.get("accept"))) {
+  if (
+    request.nextUrl.pathname === "/" &&
+    isReadRequest &&
+    acceptsMarkdown(request.headers.get("accept"))
+  ) {
     return markdownResponse(request.method !== "HEAD");
   }
 
   const response = NextResponse.next();
-  response.headers.set("Content-Signal", contentSignal);
-  response.headers.set("Link", discoveryLinkHeader);
-  response.headers.append("Vary", "Accept");
+
+  if (request.nextUrl.pathname === "/") {
+    response.headers.set("Content-Signal", contentSignal);
+    response.headers.set("Link", discoveryLinkHeader);
+    response.headers.append("Vary", "Accept");
+  }
+
+  if (
+    nonIndexablePaths.has(request.nextUrl.pathname) ||
+    request.nextUrl.pathname.startsWith("/.well-known/agent-skills/") ||
+    request.nextUrl.pathname.startsWith("/api/")
+  ) {
+    response.headers.set("X-Robots-Tag", "noindex, follow");
+  }
 
   return response;
 }
 
 export const config = {
-  matcher: "/",
+  matcher: "/((?!_next/static|_next/image|favicon.ico).*)",
 };
